@@ -41,12 +41,12 @@ html {
 }
 
 body {
-     color: #666666;
-     font-size: 14px;
-     font-family:Poppins;
-     line-height: 1.80857;
-     font-weight: normal;
-     overflow-x: hidden;
+    color: #666666;
+    font-size: 30px;
+    font-family: Poppins;
+    line-height: 1.80857;
+    font-weight: normal;
+    overflow-x: hidden;
 }
 
 a {
@@ -215,8 +215,8 @@ button {
 }
 
 .layout_padding {
-     padding-top: 90px;
-     padding-bottom: 0px;
+    padding-top: 300px;
+    padding-bottom: 300px;
 }
 
 .padding_0{
@@ -226,6 +226,7 @@ button {
 .logo {
     float: left;
     width: 5%;
+    padding-right: 10px;
 }
 .navbar {
     padding: 5px 50px;
@@ -233,7 +234,7 @@ button {
 .navbar-expand-lg .navbar-nav .nav-link {
     padding-right: 20px;
     padding-left: 20px;
-    font-size: 24px;
+    font-size: 28px;
 }
 .bg-light {
     background-color: #15a76e !important;
@@ -260,13 +261,13 @@ button {
 }
 
 .full_name {
-    font-size: 32px;
+    font-size: 36px;
     font-weight: bold;
     margin: 0;
 }
 
 .prof_title {
-    font-size: 24px;
+    font-size: 28px;
     margin: -10px 0;
 }
 
@@ -275,7 +276,6 @@ button {
     float: left;
     background-image: url(../images/banner-bg.png);
     height: auto;
-    padding-bottom: 200px;
     background-size: cover;
 }
 .image_1 {
@@ -287,7 +287,7 @@ button {
 .video_text {
     width: 100%;
     float: left;
-    font-size: 40px;
+    font-size: 28px;
     color: #15a76e;
     font-weight: 600;
     text-transform: uppercase;
@@ -296,7 +296,7 @@ button {
 .game_title {
     width: 100%;
     float: left;
-    font-size: 60px;
+    font-size: 34px;
     color: #fefeff;
     font-weight: 600;
     text-transform: uppercase;
@@ -307,11 +307,11 @@ button {
 .banner_text {
     width: 100%;
     float: left;
-    font-size: 16px;
+    font-size: 20px;
     color: #fefeff;
     font-weight: 500;
     margin-left: 0px;
-    padding-top: 50px;
+    line-height: 1.5;
 }
 
 .shop_bt {
@@ -337,41 +337,52 @@ button {
     color: #599ee9;
 }
 
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10%;
+    color: #fff;
+    text-align: center;
+    opacity: 0.5;
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+
 #my_slider {
-    width: 100%; /* Set the desired width for the entire carousel */
+    transform: scale(1.875); /* Adjust the scale factor as needed */
+    transform-origin: center; /* Center the scaling */
 }
 
 #my_slider a.carousel-control-prev {
     position: absolute;
-    left: 15px;
-    top: 50%;
+    left: 0;
+    top: 115%;
     background-color: #599ee9;
-    transform: translateY(-50%);
-    visibility: hidden;
 }
-
-#my_slider .carousel-control-next {
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    background-color: #599ee9;
-    transform: translateY(-50%);
-    visibility: hidden;
+#my_slider .carousel-control-prev, #my_slider .carousel-control-next {
+    width: 65px;
+    height: 65px;
+    background: #ffffff;
+    opacity: 1;
+    font-size: 30px;
+    color: #000;
+    border-radius: 100px;
+    margin: auto;
 }
 
 #my_slider .carousel-control-prev:hover, #my_slider .carousel-control-next:hover, #my_slider .carousel-control-prev:focus, #my_slider .carousel-control-next:focus {
     background: #599ee9;
     color: #fff;
 }
-
-#my_slider .carousel-control-prev, #my_slider .carousel-control-next {
-    width: 65px;
-    height: 20px;
-    background: #ffffff;
-    opacity: 1;
-    font-size: 30px;
-    color: #000;
-    border-radius: 20px;
+#my_slider a.carousel-control-next {
+    position: absolute;
+    right: 0;
+    top: 115%;
 }
 
 .about_section{
