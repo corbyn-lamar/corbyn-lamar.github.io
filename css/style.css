@@ -768,21 +768,19 @@ button {
 }
 
 .social_icon ul{
-    display: inline;
     margin: 0px;
     padding: 0px;
 }
 
 .social_icon li {
-    float: left;
-    padding-right: 20px;
-    padding-top: 40px;
+    display: inline;
+    margin: 0 10px;
 }
 
-.copyright_section{
+.copyright_section {
     width: 100%;
     float: left;
-    background-color: #599ee9;
+    background-color: #15a76e;
     height: auto;
 }
 
