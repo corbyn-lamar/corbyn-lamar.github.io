@@ -281,26 +281,28 @@ button {
 .image_1 {
     width: 100%;
     float: left;
-    padding-top: 40px;
+    padding-top: 0px;
 }
 
-.video_text{
+.video_text {
     width: 100%;
     float: left;
-    font-size: 50px;
-    color: #fefeff;
+    font-size: 40px;
+    color: #15a76e;
     font-weight: 600;
     text-transform: uppercase;
-
+    padding: 5px;
 }
 .game_title {
     width: 100%;
     float: left;
     font-size: 60px;
-    color: #15a76e;
+    color: #fefeff;
     font-weight: 600;
     text-transform: uppercase;
     line-height: 50px;
+    background-color: #15a76e;
+    padding: 5px 10px;
 }
 .banner_text {
     width: 100%;
@@ -335,30 +337,41 @@ button {
     color: #599ee9;
 }
 
-#my_slider a.carousel-control-prev {
-    position: relative;
-    left: 15px;
-    top: 115%;
-    background-color: #599ee9;
+#my_slider {
+    width: 100%; /* Set the desired width for the entire carousel */
 }
-#my_slider .carousel-control-prev, #my_slider .carousel-control-next {
-    width: 65px;
-    height: 65px;
-    background: #ffffff;
-    opacity: 1;
-    font-size: 30px;
-    color: #000;
-    border-radius: 100px;
+
+#my_slider a.carousel-control-prev {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    background-color: #599ee9;
+    transform: translateY(-50%);
+    visibility: hidden;
+}
+
+#my_slider .carousel-control-next {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    background-color: #599ee9;
+    transform: translateY(-50%);
+    visibility: hidden;
 }
 
 #my_slider .carousel-control-prev:hover, #my_slider .carousel-control-next:hover, #my_slider .carousel-control-prev:focus, #my_slider .carousel-control-next:focus {
     background: #599ee9;
     color: #fff;
 }
-#my_slider a.carousel-control-next {
-    position: relative;
-    left:100px;
-    top: 115%;
+
+#my_slider .carousel-control-prev, #my_slider .carousel-control-next {
+    width: 65px;
+    height: 20px;
+    background: #ffffff;
+    opacity: 1;
+    font-size: 30px;
+    color: #000;
+    border-radius: 20px;
 }
 
 .about_section{
