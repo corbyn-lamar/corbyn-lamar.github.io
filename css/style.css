@@ -224,32 +224,50 @@ button {
 }
 
 .logo {
-    width: 18%;
     float: left;
+    width: 5%;
 }
 .navbar {
-    padding: 20px 30px;
+    padding: 5px 50px;
 }
 .navbar-expand-lg .navbar-nav .nav-link {
-    padding-right: 10px;
-    padding-left: 10px;
-    font-size: 18px;
+    padding-right: 20px;
+    padding-left: 20px;
+    font-size: 24px;
 }
 .bg-light {
-    background-color: #fefeff !important;
+    background-color: #15a76e !important;
     box-shadow: 0px 0px 10px 0px;
-    border-top: 45px solid #333a44;
+    border-top: 24px solid #333a44;
 }
 .navbar-light .navbar-nav .nav-link {
+    float: right;
     color: #24292f;
     font-weight: 500;
 }
 .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
-    color: #4f99e5;
+    color: #fefeff;
 }
 
 .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
-    color: #4f99e5;
+    color: #fefeff;
+}
+
+.name_title {
+    color: black;
+    display: inline-block;
+    margin-right: 200px;
+}
+
+.full_name {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.prof_title {
+    font-size: 24px;
+    margin: -10px 0;
 }
 
 .banner_section {
@@ -318,7 +336,7 @@ button {
 }
 
 #my_slider a.carousel-control-prev {
-    position: absolute;
+    position: relative;
     left: 15px;
     top: 115%;
     background-color: #599ee9;
@@ -338,7 +356,7 @@ button {
     color: #fff;
 }
 #my_slider a.carousel-control-next {
-    position: absolute;
+    position: relative;
     left:100px;
     top: 115%;
 }
@@ -768,13 +786,13 @@ button {
 }
 
 .social_icon ul{
-    margin: 0px;
+    margin: 10px;
     padding: 0px;
 }
 
 .social_icon li {
     display: inline;
-    margin: 0 10px;
+    margin: 0px 10px;
 }
 
 .copyright_section {
