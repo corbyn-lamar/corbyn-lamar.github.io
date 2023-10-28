@@ -768,6 +768,7 @@ button {
 }
 
 .social_icon ul{
+    display: inline;
     margin: 0px;
     padding: 0px;
 }
