@@ -330,12 +330,12 @@ button {
     margin-bottom: 10%;
 }
 
-/*
+
 #my_slider {
-    transform: scale(1.875);
+    transform: scale(200%);
     transform-origin: center;
 }
-*/
+
 
 #my_slider a.carousel-control-prev {
     position: absolute;
