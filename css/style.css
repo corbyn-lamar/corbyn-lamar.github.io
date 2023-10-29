@@ -362,15 +362,42 @@ button {
     top: 115%;
 }
 
-.about_section{
+.section_header {
+    width: 100%;
+    float: left;
+    font-size: 50px;
+    color: black;
+    background-color: #15a76e;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.about_section_home {
     width: 100%;
     float: left;
     background-color: #f2f7fd;
     height: auto;
-    padding-bottom: 90px;
+    padding-bottom: 150px;
+    padding-top: 150px;
 }
 
-.long_text{
+.about_title_home {
+    width: 100%;
+    float: left;
+    font-size: 50px;
+    color: #2d343e;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.about_text_home {
+    font-size: 22px;
+    line-height: 1.25;
+}
+
+.long_text {
     width: 100%;
     float: left;
     font-size: 16px;
@@ -536,8 +563,4 @@ button {
 
 .padding_video_0{
     margin-top: 0px; 
-}
-
-about_title_home{
-
 }
