@@ -411,13 +411,31 @@ button {
     float: left;
     background-color: #f2f7fd;
     height: auto;
-    padding-bottom: 150px;
+    padding-bottom: 300px;
     padding-top: 150px;
+}
+
+.about_section {
+    width: 100%;
+    float: left;
+    background-color: #f2f7fd;
+    height: auto;
+    padding-bottom: 250px;
+    padding-top: 225px;
 }
 
 .about_title_home {
     width: 100%;
     float: left;
+    font-size: 48px;
+    color: #2d343e;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.contact_title {
+    width: 100%;
     font-size: 50px;
     color: #2d343e;
     font-weight: 600;
@@ -425,8 +443,26 @@ button {
     text-align: center;
 }
 
+.contact_list {
+    width: 100%;
+    text-align: center;
+}
+
+.contact_text {
+    width: 100%;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.25;
+    text-align: center;
+}
+
 .about_text_home {
-    font-size: 22px;
+    font-size: 26px;
+    line-height: 1.5;
+}
+
+.aboutme_text {
+    font-size: 20px;
     line-height: 1.25;
 }
 
@@ -481,6 +517,15 @@ button {
     margin-top: 90px;
 }
 
+.project_section {
+    width: 100%;
+    float: left;
+    background-color: #f2f7fd;
+    height: auto;
+    padding-bottom: 90px;
+    margin-top: 90px;
+}
+
 .main_bt {
     background: #ed1c24;
     border: none;
@@ -504,12 +549,16 @@ button {
 }
 
 .section_footer {
+    position:fixed;
+    bottom: 5%;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
     width: 100%;
     float: left;
     background-color: rgb(41, 40, 40);
     height: auto;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding: inherit;
 }
 
 .useful_link{
@@ -558,6 +607,11 @@ button {
 }
 
 .copyright_section {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
     width: 100%;
     float: left;
     background-color: #15a76e;
