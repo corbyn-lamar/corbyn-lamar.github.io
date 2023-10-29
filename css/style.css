@@ -333,37 +333,37 @@ button {
 
 @media screen and (max-width: 4000px) {
     #my_slider {
-        transform: scale(250%); /* Adjust the scaling factor for medium screens */
+        transform: scale(250%);
     }
 }
 
 @media screen and (max-width: 3200px) {
     #my_slider {
-        transform: scale(225%); /* Adjust the scaling factor for medium screens */
+        transform: scale(225%);
     }
 }
 
 @media screen and (max-width: 2600px) {
     #my_slider {
-        transform: scale(200%); /* Adjust the scaling factor for medium screens */
+        transform: scale(200%);
     }
 }
 
 @media screen and (max-width: 2400px) {
     #my_slider {
-        transform: scale(150%); /* Adjust the scaling factor for medium screens */
+        transform: scale(150%);
     }
 }
 
 @media screen and (max-width: 2000px) {
     #my_slider {
-        transform: scale(125%); /* Adjust the scaling factor for small screens */
+        transform: scale(125%);
     }
 }
 
 @media screen and (max-width: 1500px) {
     #my_slider {
-        transform: scale(100%); /* Adjust the scaling factor for small screens */
+        transform: scale(100%);
     }
 }
 
@@ -433,6 +433,57 @@ button {
     text-transform: uppercase;
     text-align: center;
 }
+
+.project_section {
+    width: 100%;
+    height: auto;
+    padding-bottom: 20%;
+    padding-top: 20%;
+}
+
+.project_spacing {
+    padding-bottom: 25%;
+}
+
+@media screen and (max-width: 4000px) {
+    .project_spacing {
+        transform: scale(250%);
+        padding-bottom: 50%;
+    }
+}
+
+@media screen and (max-width: 3200px) {
+    .project_spacing {
+        transform: scale(225%);
+        padding-bottom: 45%;
+    }
+}
+
+@media screen and (max-width: 2600px) {
+    .project_spacing {
+        transform: scale(200%);
+        padding-bottom: 40%;
+    }
+}
+
+@media screen and (max-width: 2400px) {
+    .project_spacing {
+        transform: scale(150%);
+    }
+}
+
+@media screen and (max-width: 2000px) {
+    .project_spacing {
+        transform: scale(125%);
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .project_spacing {
+        transform: scale(100%);
+    }
+}
+
 
 .contact_title {
     width: 100%;
@@ -527,15 +578,6 @@ button {
     height: 100%;
     padding-bottom: 30%;
     padding-top: 5%;
-}
-
-.project_section {
-    width: 100%;
-    float: left;
-    background-color: #f2f7fd;
-    height: auto;
-    padding-bottom: 90px;
-    margin-top: 90px;
 }
 
 .main_bt {
