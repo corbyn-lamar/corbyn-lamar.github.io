@@ -550,7 +550,7 @@ button {
 
 .section_footer {
     position:fixed;
-    bottom: 5%;
+    bottom: 60px;
     left: 0px;
     right: 0px;
     margin-bottom: 0px;
