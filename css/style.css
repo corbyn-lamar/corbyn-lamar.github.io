@@ -294,7 +294,7 @@ button {
     text-transform: uppercase;
     padding: 5px;
 }
-.game_title {
+.game_title_home {
     width: 100%;
     float: left;
     font-size: 34px;
@@ -302,6 +302,17 @@ button {
     font-weight: 600;
     text-transform: uppercase;
     line-height: 50px;
+    background-color: #15a76e;
+    padding: 5px 10px;
+}
+.game_title {
+    width: 100%;
+    float: left;
+    font-size: 30px;
+    color: #fefeff;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 30px;
     background-color: #15a76e;
     padding: 5px 10px;
 }
@@ -437,7 +448,7 @@ button {
 .project_section {
     width: 100%;
     height: auto;
-    padding-bottom: 20%;
+    padding-bottom: 15%;
     padding-top: 20%;
 }
 
@@ -484,6 +495,44 @@ button {
     }
 }
 
+.project_subtitle {
+    width: 100%;
+    float: left;
+    font-size: 16px;
+    color: #15a76e;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 5px;
+    padding-bottom: 0px;
+}
+
+.project_text_1 {
+    width: 100%;
+    float: left;
+    font-size: 12px;
+    color: #fefeff;
+    font-weight: 400;
+    margin-left: 0px;
+    line-height: 1.5;
+}
+
+.more-details-button {
+    background-color: #15a76e;
+    color: #24292f;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.more-details-button:hover {
+    color: #fefeff;
+}
 
 .contact_title {
     width: 100%;
