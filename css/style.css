@@ -331,6 +331,18 @@ button {
     margin-bottom: 10%;
 }
 
+@media screen and (max-width: 4000px) {
+    #my_slider {
+        transform: scale(250%); /* Adjust the scaling factor for medium screens */
+    }
+}
+
+@media screen and (max-width: 3200px) {
+    #my_slider {
+        transform: scale(225%); /* Adjust the scaling factor for medium screens */
+    }
+}
+
 @media screen and (max-width: 2600px) {
     #my_slider {
         transform: scale(200%); /* Adjust the scaling factor for medium screens */
@@ -344,6 +356,12 @@ button {
 }
 
 @media screen and (max-width: 2000px) {
+    #my_slider {
+        transform: scale(125%); /* Adjust the scaling factor for small screens */
+    }
+}
+
+@media screen and (max-width: 1500px) {
     #my_slider {
         transform: scale(100%); /* Adjust the scaling factor for small screens */
     }
