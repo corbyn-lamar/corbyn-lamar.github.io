@@ -353,20 +353,6 @@ button {
     line-height: 1.5;
 }
 
-.carousel-control-prev,
-.carousel-control-next {
-    position: absolute;
-    top: 50%; /* Center vertically */
-    transform: translateY(-50%); /* Correct the vertical positioning */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 10%;
-    color: #fff;
-    text-align: center;
-    opacity: 0.5;
-}
-
 @media screen and (max-width: 4000px) {
     #my_slider.home_page {
         transform: scale(250%);
@@ -403,10 +389,26 @@ button {
     }
 }
 
+.carousel-control-prev,
+.carousel-control-next {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10%;
+    color: #fff;
+    text-align: center;
+    opacity: 0.5;
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+
 
 #my_slider a.carousel-control-prev {
-    position: absolute;
-    left: 0;
+    position: fixed;
+    left: 15px;
     top: 115%;
     background-color: #599ee9;
 }
@@ -418,7 +420,6 @@ button {
     font-size: 30px;
     color: #000;
     border-radius: 100px;
-    margin: auto;
 }
 
 #my_slider .carousel-control-prev:hover, #my_slider .carousel-control-next:hover, #my_slider .carousel-control-prev:focus, #my_slider .carousel-control-next:focus {
@@ -427,7 +428,7 @@ button {
 }
 #my_slider a.carousel-control-next {
     position: absolute;
-    right: 0;
+    left:100px;
     top: 115%;
 }
 
@@ -500,11 +501,17 @@ button {
         transform: scale(200%);
         padding-bottom: 40%;
     }
+
+    .carousel-control-prev .carousel-control-next {
+    }
 }
 
 @media screen and (max-width: 2400px) {
     .project_spacing {
         transform: scale(150%);
+    }
+
+    .carousel-control-prev .carousel-control-next {
     }
 }
 
@@ -512,11 +519,17 @@ button {
     .project_spacing {
         transform: scale(125%);
     }
+
+    .carousel-control-prev .carousel-control-next {
+    }
 }
 
 @media screen and (max-width: 1500px) {
     .project_spacing {
         transform: scale(100%);
+    }
+
+    .carousel-control-prev .carousel-control-next {
     }
 }
 
