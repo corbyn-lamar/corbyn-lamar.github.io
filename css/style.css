@@ -420,6 +420,7 @@ button {
     font-size: 30px;
     color: #000;
     border-radius: 100px;
+    z-index: 2;
 }
 
 #my_slider .carousel-control-prev:hover, #my_slider .carousel-control-next:hover, #my_slider .carousel-control-prev:focus, #my_slider .carousel-control-next:focus {
