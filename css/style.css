@@ -356,8 +356,8 @@ button {
 .carousel-control-prev,
 .carousel-control-next {
     position: absolute;
-    top: 0;
-    bottom: 0;
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Correct the vertical positioning */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -365,8 +365,6 @@ button {
     color: #fff;
     text-align: center;
     opacity: 0.5;
-    margin-top: 5%;
-    margin-bottom: 10%;
 }
 
 @media screen and (max-width: 4000px) {
