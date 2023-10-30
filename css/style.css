@@ -279,6 +279,13 @@ button {
     height: auto;
     background-size: cover;
 }
+.banner_section.iootbanner {
+    width: 100%;
+    float: left;
+    background-image: url(../images/iootBanner.png);
+    height: auto;
+    background-size: cover;
+}
 .image_1 {
     width: 100%;
     float: left;
@@ -343,37 +350,37 @@ button {
 }
 
 @media screen and (max-width: 4000px) {
-    #my_slider {
+    #my_slider.home_page {
         transform: scale(250%);
     }
 }
 
 @media screen and (max-width: 3200px) {
-    #my_slider {
+    #my_slider.home_page {
         transform: scale(225%);
     }
 }
 
 @media screen and (max-width: 2600px) {
-    #my_slider {
+    #my_slider.home_page {
         transform: scale(200%);
     }
 }
 
 @media screen and (max-width: 2400px) {
-    #my_slider {
+    #my_slider.home_page {
         transform: scale(150%);
     }
 }
 
 @media screen and (max-width: 2000px) {
-    #my_slider {
+    #my_slider.home_page {
         transform: scale(125%);
     }
 }
 
 @media screen and (max-width: 1500px) {
-    #my_slider {
+    #my_slider.home_page {
         transform: scale(100%);
     }
 }
@@ -532,6 +539,78 @@ button {
 
 .more-details-button:hover {
     color: #fefeff;
+}
+
+.banner_section.project_section {
+    text-align: center;
+}
+
+@media screen and (max-width: 3000px) {
+    #my_slider.project_page {
+        transform: scale(150%);
+    }
+}
+
+@media screen and (max-width: 2000px) {
+    #my_slider.project_page {
+        transform: scale(125%);
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    #my_slider.project_page {
+        transform: scale(100%);
+    }
+}
+
+.projectpage_section_banner {
+    width: 100%;
+    height: auto;
+    padding-bottom: 10%;
+    padding-top: 10%;
+}
+
+.projectpage_title {
+    width: 100%;
+    font-size: 50px;
+    color: #fefeff;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: #15a76e;
+    padding: 0;
+    margin-bottom: 15px;
+}
+
+.projectpage_section_desc {
+    width: 100%;
+    float: left;
+    background-color: #f2f7fd;
+    height: auto;
+    background-image: url(../images/banner-bg.png);
+    background-size: cover;
+    padding-bottom: 300px;
+    padding-top: 150px;
+}
+
+.project_title {
+    width: 100%;
+    float: left;
+    font-size: 48px;
+    color: #fefeff;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.project_text_2 {
+    width: 100%;
+    float: left;
+    font-size: 20px;
+    color: #fefeff;
+    font-weight: 400;
+    margin-left: 0px;
+    line-height: 1.5;
 }
 
 .contact_title {
