@@ -31,6 +31,34 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script>
+        var videoPlayer;
+        var carouselPaused = false;
+
+        function onYouTubeIframeAPIReady() {
+            videoPlayer = new YT.Player('video', {
+                events: {
+                    'onStateChange': onPlayerStateChange
+                }
+            });
+        }
+
+        function onPlayerStateChange(event) {
+            if (event.data == YT.PlayerState.PLAYING) {
+                // Video is playing, pause the carousel
+                $('#my_slider').carousel('pause');
+                carouselPaused = true;
+            } else if (event.data == YT.PlayerState.PAUSED || event.data == YT.PlayerState.ENDED) {
+                // Video is paused or ended, resume the carousel
+                if (carouselPaused) {
+                    $('#my_slider').carousel('cycle');
+                    carouselPaused = false;
+                }
+            }
+        }
+    </script>
 </head>
 <body>
     <!-- header section start -->
@@ -76,6 +104,13 @@
                 <h1 class="projectpage_title"><i>We're Tethered Together</i></h1>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="video_1" id="youtube-video"><iframe src="https://www.youtube.com/embed/4fRUURvaed4" title="YouTube video player" frameborder="0" allowfullscreen></iframe></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="image_1"><img src="images/wtt-2.png"></div>
