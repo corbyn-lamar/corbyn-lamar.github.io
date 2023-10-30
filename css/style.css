@@ -314,20 +314,22 @@ button {
 
 video_1 {
     width: 100%;
+    height: auto;
     text-align: center;
     margin: 0 auto;
     padding-top: 0px;
 }
 
-#youtube-video {
-    text-align: center;
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%;
+.embed_container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
 }
-
-#youtube-video iframe {
-  margin: 0 auto;
+.embed_container iframe,
+.embed_container object,
+.embed_container embed {
   position: absolute;
   top: 0;
   left: 0;
