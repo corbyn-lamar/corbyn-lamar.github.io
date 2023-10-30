@@ -245,6 +245,7 @@ button {
     padding-right: 20px;
     padding-left: 20px;
     font-size: 28px;
+    text-align: center;
 }
 .bg-light {
     background-color: #15a76e !important;
