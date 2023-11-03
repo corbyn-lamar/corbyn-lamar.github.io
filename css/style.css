@@ -306,6 +306,13 @@ button {
     height: auto;
     background-size: cover;
 }
+.banner_section.ntgbanner {
+    width: 100%;
+    float: left;
+    background-image: url(../images/ntgBanner.png);
+    height: auto;
+    background-size: cover;
+}
 .image_1 {
     width: 100%;
     float: left;
@@ -532,7 +539,7 @@ video_1 {
     }
 }
 
-@media screen and (max-width: 2400px) {
+@media screen and (max-width: 2300px) {
     .project_spacing {
         transform: scale(150%);
     }
@@ -541,7 +548,7 @@ video_1 {
     }
 }
 
-@media screen and (max-width: 2000px) {
+@media screen and (max-width: 1600px) {
     .project_spacing {
         transform: scale(125%);
     }
@@ -550,13 +557,25 @@ video_1 {
     }
 }
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1300px) {
     .project_spacing {
         transform: scale(100%);
     }
 
     .carousel-control-prev .carousel-control-next {
     }
+}
+
+.project_subtitle_role {
+    width: 100%;
+    float: left;
+    font-size: 16px;
+    color: #15a76e;
+    background-color: rgb(41, 40, 40);
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 5px;
+    padding-bottom: 0px;
 }
 
 .project_subtitle {
