@@ -468,6 +468,16 @@ video_1 {
     text-align: center;
 }
 
+.home_featured_title {
+    width: 100%;
+    float: left;
+    font-size: calc(1.5vw + 1.5vh);
+    background-color: #15a76e;
+    font-weight: 600;
+    color: #fefeff;
+    text-align: center;
+}
+
 .about_section_home {
     width: 100%;
     float: left;
@@ -504,7 +514,7 @@ video_1 {
 }
 
 .project_spacing {
-    padding-bottom: 15%;
+    padding-bottom: 5%;
 }
 
 .explanation_spacing {
