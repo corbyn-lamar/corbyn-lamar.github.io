@@ -334,7 +334,6 @@ button {
 }
 .image_1 {
     width: 100%;
-    float: center;
     padding-top: 0px;
 }
 .image_2 {
@@ -343,10 +342,17 @@ button {
     padding-top: 0px;
     padding-left: 5%;
 }
+.image_gif {
+    width: 100%;
+    align-content: center;
+    padding-top: 0px;
+    border-style: solid;
+    border-width: thick;
+    border-color: black;
+}
 
 .portrait_image {
     width: 100%;
-    float: center;
     padding-top: 0px;
     padding: 0% 10%;
 }
@@ -681,6 +687,27 @@ video_1 {
 }
 
 .project_bullet_link a:hover {
+    color: #0000EE;
+    text-decoration: underline;
+}
+
+.project_file_link {
+    width: 100%;
+    font-size: calc(0.75vw + 1vh);
+    color: #fefeff;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 10px 0;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.project_file_link a {
+    color: #fefeff;
+    text-decoration: underline;
+}
+
+.project_file_link a:hover {
     color: #0000EE;
     text-decoration: underline;
 }
