@@ -666,6 +666,20 @@ video_1 {
     margin: 10px 0;
 }
 
+.project_bullet_indent {
+    list-style-type: disc;
+    list-style-position: inside;
+    width: 100%;
+    float: left;
+    font-size: calc(0.5vw + 1vh);
+    color: #fefeff;
+    font-weight: 400;
+    margin-left: 0px;
+    line-height: 1.5;
+    margin: 10px 0;
+    text-indent: 5%;
+}
+
 .project_bullet_link {
     list-style-type: disc;
     list-style-position: inside;
