@@ -375,7 +375,14 @@
                 <hr>
                 <h1 class="projectpage_subtitle">Level Generation Telemetry</h1>
                 <p class="project_file_link"><a href="assets/cnc_generation_unitTest.pdf" target="_blank">Direct PDF Link</a></p>
-                <iframe src="assets/cnc_generation_unitTest.pdf" width="800" height="760"></iframe>
+                <iframe id="myiframe" src="assets/cnc_generation_unitTest.pdf" width="800" height="760"></iframe>
+                <style>
+                    #myiframe
+                    {
+                        width: 100%;
+                        min-height: 750px;
+                    }
+                </style>
                 <p class="explanation_text_1">&emsp;&emsp;For Cats N Critters, I collected telemetry data in order to fine tune level sizes, targeting an optimal-path gameplay experience of around 15 minutes. This system allowed me to get information from 134,000 iterations while I was away from the project overnight. This data-driven approach helped balance gameplay pacing and provided insights into how well the wave function collapse algorithm performed, allowing me to identify and resolve bottlenecks to enhance overall game flow and algorithm efficiency.</p>
                 <hr>
             </div>
