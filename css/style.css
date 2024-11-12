@@ -332,6 +332,21 @@ button {
     height: auto;
     background-size: cover;
 }
+.banner_section.eidolonbanner {
+    width: 100%;
+    float: left;
+    background-image: url(../images/eidolonBanner.png);
+    height: auto;
+    background-size: cover;
+}
+.banner_section.dungeon3dbanner {
+    width: 100%;
+    float: left;
+    background-image: url(../images/dungeon3DBanner.png);
+    height: auto;
+    background-size: cover;
+}
+
 .image_1 {
     width: 100%;
     padding-top: 0px;
@@ -713,17 +728,16 @@ video_1 {
 }
 
 .project_bullet_indent {
-    list-style-type: disc;
+    list-style-type: circle;
     list-style-position: inside;
     width: 100%;
     float: left;
     font-size: calc(0.5vw + 1vh);
     color: #fefeff;
     font-weight: 400;
-    margin-left: 0px;
     line-height: 1.5;
     margin: 10px 0;
-    text-indent: 5%;
+    padding-left: 2em;
 }
 
 .project_bullet_link {
@@ -837,7 +851,7 @@ video_1 {
 }
 
 .about_text_home {
-    font-size: calc(0.75vw + 1.25vh);
+    font-size: calc(0.75vw + 0.75vh);
     line-height: 1.5;
 }
 
