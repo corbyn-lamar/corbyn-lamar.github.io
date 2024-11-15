@@ -99,7 +99,7 @@
     <div class="banner_section dungeon3dbanner projectpage_section_banner">
         <div class="container">
             <div id="my_slider" class="carousel slide project_page" data-ride="carousel" data-interval="8000">
-                <h1 class="projectpage_title"><i>Procedural 3D Dungeon Generation Tool Using A* Path Optimization</i></h1>
+                <h1 class="projectpage_title"><i>Modular 3D Dungeon Generation Tool With A*</i></h1>
                 <div class="row">
                     <div class="col-md-12">
                         <div class="embed_container"><iframe src="https://www.youtube.com/embed/8-9so2joVZA?si=KjmHc4n4j5WCF9Fb?vq=hd720" title="YouTube video player" frameborder="0" allowfullscreen></iframe></div>
@@ -113,7 +113,7 @@
     <div class="projectpage_section_desc layout_padding">
         <div class="container">
             <div class="row">
-                <h1 class="projectpage_gametitle"><i>Procedural 3D Dungeon Generation Tool Using A* Path Optimization</i></h1>
+                <h1 class="projectpage_gametitle"><i>Modular 3D Dungeon Generation Tool With A*</i></h1>
                 <hr>
                 <h1 class="projectpage_roletitle">Personal Project</h1>
                 <hr>
@@ -124,57 +124,133 @@
                     <ul>
                         <li class="project_bullet">Solo Personal Project</li>
                         <li class="project_bullet">Unity Engine</li>
-                        <li class="project_bullet">August 2024 - December 2024</li>
+                        <li class="project_bullet">August 2024 - November 2024</li>
                     </ul>
                 </div>
                 <div class="col-md-6">
                     <h1 class="projectpage_subtitle">Project Details</h1>
                     <ul>
-                        <li class="project_bullet">TODO</li>
-                        <li class="project_bullet">TODO</li>
-                        <li class="project_bullet">TODO</li>
+                        <li class="project_bullet">Implemented Prim's algorithm for adjustable connectivity between rooms based on designer input.</li>
+                        <li class="project_bullet">Utilized the BFS algorithm to find and mark optimal paths through the dungeon from the entrance to the exit.</li>
+                        <li class="project_bullet">Built a modified A* pathfinding system for generating optimal, traversable hallways and staircases within a 3D grid.</li>
+                        <li class="project_bullet">Developed custom Unity Editor tools for dungeon movement, scaling, and visualization.</li>
+                        <li class="project_bullet">Added phase based tile placement and tile weight adjustments to support gameplay progression and modular level creation.</li>
+                        <li class="project_bullet">Focused on user friendly UI with dynamic sliders and real time parameter updates.</li>
+                        <li class="project_bullet">Integrated telemetry and unit testing for performance monitoring and seed based debugging.</li>
                     </ul>
                 </div>
             </div>
-            <div class="row">
+            <div class="row explanation_spacing">
                 <hr>
                 <h1 class="projectpage_subtitle">Tool Purpose</h1>
-                <p class="project_bullet">This tool is designed to streamline the creation of procedurally generated portions of levels for 3D games. It is focused on enhancing the workflow for generating connected room systems, such as dungeons. It will feature options for generating in an area, room placement, room adjustment, hall placement, staircase placement, and other features for how it generates. This tool is useful for placing procedural dungeons in between some of the more handcrafted set pieces.</p>
+                <p class="project_bullet">This tool is designed to streamline the creation of procedurally generated portions of levels for 3D games. It is focused on enhancing the workflow for generating connected room systems, such as dungeons. The tool should feature options for generating in an area, room placement, room adjustment, hall placement, staircase placement, and other adjustable values for how it generates. It’s mainly a tool to connect more major set pieces of level together through procedural dungeons rather than being a standalone dungeon itself.</p>
                 <h1 class="projectpage_subtitle">Target Audience</h1>
-                <p class="project_bullet">The tool is intended for level designers and game developers working on procedurally generated environments in 3D games, particularly those in roguelike, dungeon crawler, or adventure genres. It is also may be useful for technical artists and designers who want more control over procedural level generation in their levels. It’s mainly a tool to connect pieces of level together through procedural dungeons rather than being a standalone dungeon.</p>
+                <p class="project_bullet">The tool is intended for level designers and game developers working on procedurally generated environments in 3D games, particularly those working on 3D roguelike, dungeon crawler, or adventure genre games.</p>
                 <h1 class="projectpage_subtitle">Problem the Tool Solves</h1>
-                <p class="project_bullet">Making parts of a large and re-playable level can be difficult. This tool allows developers to generate connected, cohesive, and traversable dungeons procedurally without super extensive manual placement. This tool should simplify the process by providing intuitive features for dungeon generation, improving the speed and efficiency of level creation. Developers can use this tool to generate diverse dungeon layouts in a streamlined and efficient manner. The tool will be focused mainly on generating a procedural portion of a level between set pieces that the level designers could have.</p>
+                <p class="project_bullet">Making parts of a large and re-playable level can be difficult. This tool allows developers to generate connected, cohesive, and traversable dungeons procedurally without super extensive manual placement. This tool should simplify the process by providing intuitive features for dungeon generation, improving the speed and efficiency of level creation or allowing for dungeons to be rerolled at runtime.</p>
                 <h1 class="projectpage_subtitle">Vision Statement</h1>
-                <p class="project_bullet">The tool's vision is to create a modular, flexible, and intelligent way of procedurally generating a portion of a level. The design principles revolve around accessibility for non-programmers, ease of integration into existing projects, and adaptability/modularity for various game mechanics. The tool should allow for iterative adjustments and scalability for various game sizes and complexities.</p>
+                <p class="project_bullet">This tool's vision is to create a modular, flexible, and intelligent way of procedurally generating a portion of a level. The design principles revolve around accessibility for non-programmers, ease of integration into existing projects, and adaptability/modularity for various game mechanics. The tool should allow for iterative adjustments and scalability for various game sizes and complexities.</p>
             </div>
-            <div class="row">
-                <h1 class="projectpage_subtitle">Project Screenshots</h1>
+            <div class="row explanation_spacing">
+                <h1 class="projectpage_gametitle"><i>Implementation in Review</i></h1>
+                <hr>
+                <h1 class="projectpage_roletitle">Procedural Dungeon Tool: Optimizing Modular 3D Dungeons Paths with A*</h1>
+                <hr>
             </div>
-            <div class="row">
-                <div class="image_1"><img src="images/astarmarch-4.png"></div>
-                <p class="image_text_1">&emsp;&emsp;TODO.</p>
+            <div class="row explanation_spacing ">
+                <div class="col-md-6">
+                    <p class="explanation_text_1">&emsp;&emsp;Marked rooms for placement in a 3D grid structure, ensuring to also mark down door exit positions and check for placement validity.</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="image_bordered"><img src="images/dun3DEx-1.png"></div>
+                </div>
             </div>
-            <div class="row">
-                <div class="image_1"><img src="images/astarmarch-2.png"></div>
-                <p class="image_text_1">&emsp;&emsp;TODO.</p>
+            <div class="row explanation_spacing ">
+                <div class="col-md-6">
+                    <p class="explanation_text_1">&emsp;&emsp;Cited below, I utilized the Bowyer Watson Tetrahedralization algorithm, to generate a complete graph structure out of these positions nodes in 3D space.</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="image_bordered"><img src="images/dun3DEx-2.png"></div>
+                </div>
             </div>
-            <div class="row">
-                <div class="image_1"><img src="images/astarmarch-1.png"></div>
-                <p class="image_text_1">&emsp;&emsp;TODO.</p>
+            <div class="row explanation_spacing ">
+                <div class="col-md-6">
+                    <p class="explanation_text_1">&emsp;&emsp;Using Prim's Algorithm, I created a Minimum Spanning Tree out of the graph structure in order to simplify the number of dungeon connections.</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="image_bordered"><img src="images/dun3DEx-3.png"></div>
+                </div>
             </div>
-            <div class="row">
-                <div class="image_1"><img src="images/astarmarch-3.png"></div>
-                <p class="image_text_1">&emsp;&emsp;TODO.</p>
+            <div class="row explanation_spacing ">
+                <div class="col-md-6">
+                    <p class="explanation_text_1">&emsp;&emsp;Added back connections into the graph based on an adjustable value in the editor tool for dungeon connectivity.</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="image_bordered"><img src="images/dun3DEx-4.png"></div>
+                </div>
+            </div>
+            <div class="row explanation_spacing ">
+                <div class="col-md-6">
+                    <p class="explanation_text_1">&emsp;&emsp;In order to get an optimal path out of the graph, a Breadth First Search algorithm is run from the entrance node to the exit node and the paths are marked accordingly. This step was done in case any later tooling or additions wanted to add items such as signifiers or progression mechanics to that path.</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="image_bordered"><img src="images/dun3DEx-5.png"></div>
+                </div>
+            </div>
+            <div class="row explanation_spacing ">
+                <div class="col-md-6">
+                    <p class="explanation_text_1">&emsp;&emsp;Using a modified version of A* for either one tile wide or two tile wide staircases, paths are then created on the grid structure using the connections in the graph.</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="image_bordered"><img src="images/dun3DEx-6.png"></div>
+                </div>
+            </div>
+            <div class="row explanation_spacing ">
+                <div class="col-md-6">
+                    <p class="explanation_text_1">&emsp;&emsp;When specified, tiles are then loaded and spawned using weighted random and phase based tile selection.</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="image_bordered"><img src="images/dun3DEx-7.png"></div>
+                </div>
+            </div>
+            <div class="row explanation_spacing ">
+                <div class="col-md-6">
+                    <p class="explanation_text_1">&emsp;&emsp;The Custom Unity Editor offers many features for dungeon modification including regeneration on scene start, showing gizmos, spawning tiles, the dungeon's grid and axis sizes, phase generation settings, hall settings, room settings, seeding, and unit testing. Many features are dynamic and automatically adjust to other parameters, such as the room size maximums when the dungeon size is updated.</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="image_bordered"><img src="images/dun3DEx-8.png"></div>
+                </div>
+            </div>
+            <div class="row explanation_spacing ">
+                <div class="col-md-6">
+                    <p class="explanation_text_1">&emsp;&emsp;Gif showing an example traversable dungeon structure with the path gizmos enabled.</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="image_bordered"><img src="images/3DDun_gif2.gif"></div>
+                </div>
+            </div>
+            <div class="row auto-resizable-iframe" style="display: flex; flex-direction:column; align-items: center;">
+                <hr>
+                <h1 class="projectpage_subtitle">Level Generation Telemetry</h1>
+                <p class="project_file_link"><a href="assets/3DDungeon_generation_unitTest.pdf" target="_blank">Direct PDF Link</a></p>
+                <iframe id="myiframe" src="assets/3DDungeon_generation_unitTest.pdf" width="800" height="760"></iframe>
+                <style>
+                    #myiframe {
+                        width: 100%;
+                        min-height: 750px;
+                    }
+                </style>
+                <p class="explanation_text_1">&emsp;&emsp;I implemented a custom telemetry unit within Unity to gather data under specific generation settings: a dungeon size of 25x25x25 (15,625 tiles per grid), room sizes varying from 3-8 tiles in the X and Z directions and 1-2 tiles in the Y direction, a graph connectivity factor of 1/8, and 100 iterations for each stair mode. This data has been invaluable for optimizing the generator and addressing errors and edge cases within the algorithm.</p>
             </div>
             <div class="row">
                 <hr>
                 <h1 class="projectpage_subtitle">Project Outcome</h1>
-                <p class="project_bullet">TODO.</p>
+                <p class="project_bullet">This project was an exciting opportunity to combine technical problem solving with my passion for creating tools that empower other developers. I was able to focus on making a tool that’s flexible, intuitive, and easy for level designers to use, so that they can focus their creativity without getting too stuck in the technical complexity of procedural generation. With customizable options and debugging tools, this tool makes building modular dungeons efficient and easy to use.</p>
             </div>
             <div class="row">
                 <hr>
                 <h1 class="projectpage_subtitle">Project References</h1>
-                <a class="project_bullet" href="https://www.youtube.com/watch?v=rBY2Dzej03A">[Procedurally Generated 3D Dungeons] Vazgriz. Bowyer Watson Tetrahedralization Algorithm, https://www.youtube.com/watch?v=rBY2Dzej03A</a>
+                <a class="project_bullet" target="_blank" href="https://www.youtube.com/watch?v=rBY2Dzej03A">[Procedurally Generated 3D Dungeons] Vazgriz. Bowyer Watson Tetrahedralization Algorithm, https://www.youtube.com/watch?v=rBY2Dzej03A</a>
             </div>
         </div>
     </div>
