@@ -346,6 +346,13 @@ button {
     height: auto;
     background-size: cover;
 }
+.banner_section.topdownPCG2Dbanner {
+    width: 100%;
+    float: left;
+    background-image: url(../images/2DTD_PCGBanner.png);
+    height: auto;
+    background-size: cover;
+}
 
 .image_1 {
     width: 100%;
