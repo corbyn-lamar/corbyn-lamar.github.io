@@ -102,7 +102,7 @@
                 <h1 class="projectpage_title"><i>Phase Based Procedural 2D Level Generation</i></h1>
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="embed_container"><iframe src="https://www.youtube.com/embed/8-9so2joVZA?si=KjmHc4n4j5WCF9Fb?vq=hd720" title="YouTube video player" frameborder="0" allowfullscreen></iframe></div>
+                        <div class="embed_container"><iframe src="https://www.youtube.com/embed/TIqQ-u6L-68?si=YBbpLqU7FJm9Qkqz" title="YouTube video player" frameborder="0" allowfullscreen></iframe></div>
                     </div>
                 </div>
             </div>
@@ -139,30 +139,73 @@
                     </ul>
                 </div>
             </div>
-            <div class="row">
+            <div class="row explanation_spacing">
+                <h1 class="projectpage_gametitle"><i>Implementation in Review</i></h1>
                 <hr>
-                <h1 class="projectpage_subtitle">Project Screenshots</h1>
+                <h1 class="projectpage_roletitle">Procedural Top Down Shooter: Modes and Phase Based Generation Design</h1>
+                <hr>
             </div>
-            <div class="row">
-                <div class="image_1"><img src="images/astarmarch-4.png"></div>
-                <p class="image_text_1">&emsp;&emsp;Image Description. </p>
+            <div class="row explanation_spacing ">
+                <div class="col-md-6">
+                    <p class="explanation_text_1">&emsp;&emsp;The algorithm starts out by dividing the level into diagonal slices, where each phase selects modes from its possible pools. In addition, it selects corners to spawn the starting room and the boss room. The starting room gets spawned first to give the generation a starting point at the room's corner facing the center.</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="image_bordered"><img src="images/2DTDPCG-1.png"></div>
+                </div>
             </div>
-            <div class="row">
-                <div class="image_1"><img src="images/astarmarch-2.png"></div>
-                <p class="image_text_1">&emsp;&emsp;Image Description. </p>
+            <div class="row explanation_spacing ">
+                <div class="col-md-6">
+                    <p class="explanation_text_1">
+                        &emsp;&emsp;Next, the algorithm continues generating towards the opposite corner, with the logic for each tile that it places being changed depending on the phase of the current tile. These modes of generation provide unique spatial challenges to the player to keep gameplay varied, but still intentionally designed. The phases for the accompanying picture are as follows:
+                        <ul>
+                            <li class="project_bullet"><span style="color: #29E35A">Setup</span>: Setup Mode - Characterized by medium length hallways, leading the player easily to the next phases.</li>
+                            <li class="project_bullet"><span style="color: #54e815">Development 1</span>: Maze Mode - Characterized by short and often branching hallways, allowing for the next phases to have more tiles entering them.</li>
+                            <li class="project_bullet"><span style="color: #FFCE1B">Development 2</span>: Diamond Mode - Characterized by small rooms, where the corners are cut.</li>
+                            <li class="project_bullet"><span style="color: #FC6A03">Development 3</span>: Big Room Mode - Characterized by large rooms, where elite-type enemies have the space to battle players within.</li>
+                        </ul>
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <div class="image_bordered"><img src="images/2DTDPCG-2.png"></div>
+                </div>
             </div>
-            <div class="row">
-                <div class="image_1"><img src="images/astarmarch-1.png"></div>
-                <p class="image_text_1">&emsp;&emsp;Image Description. </p>
+            <div class="row explanation_spacing ">
+                <div class="col-md-6">
+                    <p class="explanation_text_1">&emsp;&emsp;After this step, the <span style="color: #F73447">Boss Room</span> gets spawned in the corner opposite to the setup phase. The arena is set up such that the player has enough space to engage the boss as well as ensuring that the path to the boss is traversable. In addition to spawning the space, this step also includes spawning powerups in a hall before the boss room in order to help afford what the room is.</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="image_bordered"><img src="images/2DTDPCG-3.png"></div>
+                </div>
             </div>
-            <div class="row">
-                <div class="image_1"><img src="images/astarmarch-3.png"></div>
-                <p class="image_text_1">&emsp;&emsp;Image Description. </p>
+            <div class="row explanation_spacing ">
+                <div class="col-md-6">
+                    <p class="explanation_text_1">&emsp;&emsp;The algorithm does another final sweep over the generated level at this step, ensuring that the following conditions are met: 1) The player is able to navigate to and get inside the boss room, 2) Enough rooms spawn in the level in order for players to explore and engage enemies within them, and 3) Enough tiles spawn in the level in order to meet the engagement type of exploration. If one or more of these conditions are not met, the level regenerates.</p>
+                    <p class="explanation_text_1">&emsp;&emsp;In addition, power ups are added to the level in this pass to reward the player's exploration of some of the longer paths (seen by the arrows). In addition, a speed powerup is placed at the start of the first development phase to introduce powerups to the player and acts a hook as well.</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="image_bordered"><img src="images/2DTDPCG-4.png"></div>
+                </div>
+            </div>
+            <div class="row explanation_spacing ">
+                <div class="col-md-6">
+                    <p class="explanation_text_1">&emsp;&emsp;Once all of the validation checks pass, the level spawns walls and enemies at appropriate tiles in the various phases. Each mode of generation has different pools of enemies that it’s able to spawn and weighting for how often that enemy spawns. For instance, sniper enemies are highly likely to spawn in the third development phase for modes that have long corridors. This is done since snipers are able to pierce through and destroy walls with their shots, opening up new paths for the player to take. It also helps introduce the wall destruction mechanic the boss and final powerup uses.</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="image_bordered"><img src="images/2DTDPCG-5.png"></div>
+                </div>
+            </div>
+            <div class="row explanation_spacing ">
+                <div class="col-md-6">
+                    <p class="explanation_text_1">&emsp;&emsp;The accompanying gif is a visualization of how the dungeon generates. Some of the generations fail due to the factors specified above, but others succeed, shown by the spawning of the boss room and dungeon walls. In all, there are <strong>8</strong> different modes that the dungeon may generate, which vary the most in the <span style="color: #FFCE1B">development 2</span> and <span style="color: #FC6A03">development 3</span> phases. This is done to ensure a large level span from the start as well as to keep the beginning phases more friendly for the lower power of enemies found there.</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="image_bordered"><img src="images/2DTD_gif1.gif"></div>
+                </div>
             </div>
             <div class="row">
                 <hr>
                 <h1 class="projectpage_subtitle">Project Outcome</h1>
-                <p class="project_bullet">TODO.</p>
+                <p class="project_bullet">The algorithm successfully generates varied dungeon layouts with distinct phases, providing players with unique spatial challenges and intentional gameplay design. Each phase contributes to a cohesive progression, from guided exploration in the Setup Mode to intense elite combat in Big Room Mode. Validation checks ensure player navigability, engaging exploration, and balanced enemy encounters, creating replayable levels that adapt dynamically to different generation modes. Through this project, I learned how to design systems that balance procedural variation with intentional design, ensuring proper enagement for players.</p>
             </div>
         </div>
     </div>
