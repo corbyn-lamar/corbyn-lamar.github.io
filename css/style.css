@@ -358,6 +358,11 @@ button {
     width: 100%;
     padding-top: 0px;
 }
+.image_1-round {
+    width: 100%;
+    padding-top: 0px;
+    border-radius: 50%;
+}
 .image_2 {
     width: 50%;
     float: left;
@@ -387,7 +392,9 @@ button {
     border-style: solid;
     border-width: thick;
     border-color: black;
-    margin:auto;
+    margin: auto;
+    border-radius: 25px;
+    overflow: hidden
 }
 
 video_1 {
