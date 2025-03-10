@@ -98,13 +98,13 @@
     <!-- slides section start -->
     <div class="banner_section eidolonbanner projectpage_section_banner">
         <div class="container">
-            <div id="my_slider" class="carousel slide project_page" data-ride="carousel" data-interval="8000">
+            <div id="my_slider" class="carousel slide project_page" data-ride="carousel" data-interval="8000" data-bs-ride="carousel">
                 <h1 class="projectpage_title"><i>Eidolon Fate of Fools</i></h1>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="row">
                             <div class="col-md-12">
-                                <div class="embed_container"><iframe src="https://www.youtube.com/embed/0EYVUFKCyEs" title="Eidolon: Fate of Fools Early Gameplay" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+                                <div class="embed_container"><iframe src="https://www.youtube.com/embed/0EYVUFKCyEs?rel=0" title="Eidolon: Fate of Fools Early Gameplay" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
                             </div>
                         </div>
                     </div>
@@ -167,7 +167,7 @@
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <div class="embed_container"><iframe src="https://www.youtube.com/embed/0EYVUFKCyEs" title="Eidolon: Fate of Fools Early Gameplay" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+                    <div class="embed_container"><iframe src="https://www.youtube.com/embed/0EYVUFKCyEs?rel=0" title="Eidolon: Fate of Fools Early Gameplay" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
                 </div>
             </div>
             <div class="row explanation_spacing ">
@@ -175,7 +175,7 @@
                     <p class="explanation_title_1">Player Spawning System</p>
                     <p class="explanation_text_1">&emsp;&emsp;To optimize player spawning, the system evaluates each spawn position relative to active enemy combatants. Spawn positions are then scored based on distance from these combatants, with a penalty applied if the position is within their line of sight. This ensures players spawn out of sight and as far from combat as possible in order for them to gather more resources throughout the map before entering another engagement.</p>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 centerContainer">
                     <div class="image_bordered"><img src="images/WIP.png"></div>
                 </div>
             </div>
@@ -184,7 +184,7 @@
                     <p class="explanation_title_1">Weapon Spawning System</p>
                     <p class="explanation_text_1">&emsp;&emsp;Weapons, represented as tarot cards, spawn at designated locations. Each spawn point references a data table that holds a pool of available cards. Cards are selected via weighted random rolls, with cooldown times determined by the data table. This system allows system and level designers alike to balance weapon distribution and spawn rates throughout the map.</p>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 centerContainer">
                     <div class="image_bordered"><img src="images/WIP.png"></div>
                 </div>
             </div>
@@ -193,7 +193,7 @@
                     <p class="explanation_title_1">Bounce Pads</p>
                     <p class="explanation_text_1">&emsp;&emsp;Bounce pads apply an adjustable vertical impulse to combatants and projectiles. Projectiles also retain a configurable percentage of their horizontal velocity, preserving momentum and enabling controlled redirection for fun player interactions.</p>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 centerContainer">
                     <div class="image_bordered"><img src="images/WIP.png"></div>
                 </div>
             </div>
@@ -202,16 +202,16 @@
                     <p class="explanation_title_1">Propulsion Lifts</p>
                     <p class="explanation_text_1">&emsp;&emsp;A spline-based system that allows level designers to create gravity lifts throughout the map. Segments are dynamically placed along the spline, with adjustable parameters for segment spacing, size, and launch speed. Combatants and projectiles move through sequential segments until they reach the final exit segment, where the exit direction and speed can be customized for players and projectiles separately.</p>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 centerContainer">
                     <div class="image_bordered"><img src="images/WIP.png"></div>
                 </div>
             </div>
-            <div class="row explanation_spacing ">
+            <div class="row explanation_spacing">
                 <div class="col-md-6">
                     <p class="explanation_title_1">Moving Platforms</p>
                     <p class="explanation_text_1">&emsp;&emsp;A spline-based system that allows level designers to create moving platforms using networked events. Adjustable settings include travel time between segments, wait times at each stop, looping behavior, and whether the platform cycles back or resets to the start.</p>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 centerContainer">
                     <div class="image_bordered"><img src="images/WIP.png"></div>
                 </div>
             </div>
@@ -220,7 +220,7 @@
                     <p class="explanation_title_1">Inverse Moon (Power Weapon) - 1v1 Arena</p>
                     <p class="explanation_text_1">&emsp;&emsp;This mechanic acts as the inverted ability of The Moon, the game’s second power weapon. Upon activation, the initiating and targeted combatant are transported to an isolated arena, where they receive identical cards. A brief introduction sequence occurs, allowing the combatants to see their opponent before the arena walls rise and gradually lower as the duel begins. The winner of the duel claims a fully recharched Moon card, and both players return to the main match, continuing the lunar cycle.</p>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 centerContainer">
                     <div class="image_bordered"><img src="images/WIP.png"></div>
                 </div>
             </div>
@@ -265,14 +265,14 @@
                         <li class="explanation_bullet_indent">Bounce Pads</li>
                     </ul>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 centerContainer">
                     <div class="container">
-                        <div id="my_slider_divinity" class="carousel slide project_page" data-ride="carousel" data-interval="15000">
+                        <div id="my_slider_divinity" class="carousel slide project_page" data-ride="carousel" data-interval="15000" data-bs-ride="carousel">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <div class="embed_container image_bordered"><iframe src="https://www.youtube.com/embed/0EYVUFKCyEs" title="Eidolon: Fate of Fools Early Gameplay" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+                                            <div class="embed_container image_bordered"><iframe src="https://www.youtube.com/embed/QlRMrhPsGZM?si=63hVi7xLRb_u1TXS?rel=0" title="Eidolon: Fate of Fools Divinity Feature" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
                                         </div>
                                     </div>
                                 </div>
@@ -352,14 +352,14 @@
                         <li class="explanation_bullet_indent">Moving Platforms</li>
                     </ul>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 centerContainer">
                     <div class="container explanation_spacing">
-                        <div id="my_slider_elevate" class="carousel slide project_page" data-ride="carousel" data-interval="15000">
+                        <div id="my_slider_elevate" class="carousel slide project_page" data-ride="carousel" data-interval="15000" data-bs-ride="carousel">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <div class="embed_container image_bordered"><iframe src="https://www.youtube.com/embed/0EYVUFKCyEs" title="Eidolon: Fate of Fools Early Gameplay" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+                                            <div class="embed_container image_bordered"><iframe src="https://www.youtube.com/embed/vbnDpP5YXZE?si=KXmIiqX-h1WnhJaP?rel=0" title="Eidolon: Fate of Fools Elevate Feature" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
                                         </div>
                                     </div>
                                 </div>
@@ -439,14 +439,14 @@
                         <li class="explanation_bullet_indent">Bounce Pads</li>
                     </ul>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 centerContainer">
                     <div class="container explanation_spacing">
-                        <div id="my_slider_transcendence" class="carousel slide project_page" data-ride="carousel" data-interval="15000">
+                        <div id="my_slider_transcendence" class="carousel slide project_page" data-ride="carousel" data-interval="15000" data-bs-ride="carousel">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <div class="embed_container image_bordered"><iframe src="https://www.youtube.com/embed/0EYVUFKCyEs" title="Eidolon: Fate of Fools Early Gameplay" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+                                            <div class="embed_container image_bordered"><iframe src="https://www.youtube.com/embed/2SmDtqQbMa8?si=t53rrUNdOAGH7tLA?rel=0" title="Eidolon: Fate of Fools Transcendence Feature" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
                                         </div>
                                     </div>
                                 </div>
@@ -527,18 +527,11 @@
                         <li class="explanation_bullet_indent">Utilize as a Testing Space During Development</li>
                     </ul>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 centerContainer">
                     <div class="container explanation_spacing">
-                        <div id="my_slider_practicerange" class="carousel slide project_page" data-ride="carousel" data-interval="15000">
+                        <div id="my_slider_practicerange" class="carousel slide project_page" data-ride="carousel" data-interval="15000" data-bs-ride="carousel">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="embed_container image_bordered"><iframe src="https://www.youtube.com/embed/0EYVUFKCyEs" title="Eidolon: Fate of Fools Early Gameplay" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="image_bordered"><img src="images/eidolon_pr-1.png"></div>
@@ -585,7 +578,7 @@
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <div class="embed_container"><iframe src="https://www.youtube.com/embed/0EYVUFKCyEs" title="Eidolon: Fate of Fools Early Gameplay" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+                    <div class="embed_container"><iframe src="https://www.youtube.com/embed/0EYVUFKCyEs?rel=0" title="Eidolon: Fate of Fools Early Gameplay" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
                 </div>
             </div>
             <div class="row explanation_spacing">
