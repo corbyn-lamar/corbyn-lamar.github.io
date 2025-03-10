@@ -645,6 +645,16 @@ video_1 {
     line-height: 1.5;
 }
 
+.explanation_title_1 {
+    width: 100%;
+    float: left;
+    font-size: calc(0.75vw + 1.0vh);
+    color: #fefeff;
+    font-weight: 450;
+    margin-left: 0px;
+    line-height: 1;
+}
+
 .explanation_text_1 {
     width: 100%;
     float: left;
@@ -653,6 +663,31 @@ video_1 {
     font-weight: 400;
     margin-left: 0px;
     line-height: 1.5;
+    margin-bottom: 0px;
+}
+
+.explanation_bullet {
+    list-style-type: disc;
+    list-style-position: inside;
+    width: 100%;
+    float: left;
+    font-size: calc(0.5vw + 1vh);
+    color: #fefeff;
+    font-weight: 400;
+    margin-left: 0px;
+    line-height: 1.5;
+}
+
+.explanation_bullet_indent {
+    list-style-type: circle;
+    list-style-position: inside;
+    width: 100%;
+    float: left;
+    font-size: calc(0.5vw + 1vh);
+    color: #fefeff;
+    font-weight: 400;
+    line-height: 1.5;
+    padding-left: 2em;
 }
 
 .image_text_1 {
