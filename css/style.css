@@ -658,7 +658,7 @@ video_1 {
 .explanation_text_1 {
     width: 100%;
     float: left;
-    font-size: calc(0.4vw + 1.0vh);
+    font-size: calc(0.4vw + 1.2vh);
     color: #fefeff;
     font-weight: 400;
     margin-left: 0px;
@@ -671,7 +671,7 @@ video_1 {
     list-style-position: inside;
     width: 100%;
     float: left;
-    font-size: calc(0.4vw + 1vh);
+    font-size: calc(0.4vw + 1.2vh);
     color: #fefeff;
     font-weight: 400;
     margin-left: 0px;
@@ -683,7 +683,7 @@ video_1 {
     list-style-position: inside;
     width: 100%;
     float: left;
-    font-size: calc(0.4vw + 1vh);
+    font-size: calc(0.4vw + 1.2vh);
     color: #fefeff;
     font-weight: 400;
     line-height: 1.5;
@@ -692,11 +692,12 @@ video_1 {
 
 .image_text_1 {
     width: 100%;
-    text-align:center;
-    font-size: 20px;
+    text-align: center;
+    font-size: calc(0.4vw + 1.25vh);
     color: #fefeff;
     font-weight: 400;
     margin-left: 0px;
+    margin-top: .5%;
     line-height: 1.5;
 }
 
@@ -776,7 +777,7 @@ video_1 {
     list-style-position: inside;
     width: 100%;
     float: left;
-    font-size: calc(0.4vw + 1vh);
+    font-size: calc(0.4vw + 1.2vh);
     color: #fefeff;
     font-weight: 400;
     margin-left: 0px;
@@ -789,7 +790,7 @@ video_1 {
     list-style-position: inside;
     width: 100%;
     float: left;
-    font-size: calc(0.4vw + 1vh);
+    font-size: calc(0.4vw + 1.2vh);
     color: #fefeff;
     font-weight: 400;
     line-height: 1.5;
@@ -802,7 +803,7 @@ video_1 {
     list-style-position: inside;
     width: 100%;
     float: left;
-    font-size: calc(0.4vw + 1vh);
+    font-size: calc(0.4vw + 1.2vh);
     color: #fefeff;
     font-weight: 400;
     margin-left: 0px;
