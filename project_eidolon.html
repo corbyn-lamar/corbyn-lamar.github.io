@@ -204,7 +204,7 @@
                         <p class="explanation_text_1">&emsp;&emsp;To optimize player spawning, the system evaluates each spawn position relative to active enemy combatants. Spawn positions are then scored based on distance from these combatants, with a penalty applied if the position is within their line of sight. This ensures players spawn out of sight and as far from combat as possible in order for them to gather more resources throughout the map before entering another engagement.</p>
                     </div>
                     <div class="col-md-6 centerContainer">
-                        <div class="image_bordered"><img src="images/WIP.png"></div>
+                        <div class="image_bordered"><img src="images/eidolon_playerSpawner2.gif"></div>
                     </div>
                 </div>
                 <div class="row explanation_spacing ">
@@ -213,7 +213,7 @@
                         <p class="explanation_text_1">&emsp;&emsp;Weapons, represented as tarot cards, spawn at designated locations. Each spawn point references a data table that holds a pool of available cards. Cards are selected via weighted random rolls, with cooldown times determined by the data table. This system allows system and level designers alike to balance weapon distribution and spawn rates throughout the map.</p>
                     </div>
                     <div class="col-md-6 centerContainer">
-                        <div class="image_bordered"><img src="images/WIP.png"></div>
+                        <div class="image_bordered"><img src="images/eidolon_cardSpawner2.gif"></div>
                     </div>
                 </div>
                 <div class="row explanation_spacing ">
@@ -222,7 +222,7 @@
                         <p class="explanation_text_1">&emsp;&emsp;Bounce pads apply an adjustable vertical impulse to combatants and projectiles. Projectiles also retain a configurable percentage of their horizontal velocity, preserving momentum and enabling controlled redirection for fun player interactions.</p>
                     </div>
                     <div class="col-md-6 centerContainer">
-                        <div class="image_bordered"><img src="images/WIP.png"></div>
+                        <div class="image_bordered"><img src="images/eidolon_bouncePad.gif"></div>
                     </div>
                 </div>
                 <div class="row explanation_spacing ">
@@ -237,10 +237,10 @@
                 <div class="row explanation_spacing">
                     <div class="col-md-6">
                         <p class="explanation_title_1">Moving Platforms</p>
-                        <p class="explanation_text_1">&emsp;&emsp;A spline-based system that allows level designers to create moving platforms using networked events. Adjustable settings include travel time between segments, wait times at each stop, looping behavior, and whether the platform cycles back or resets to the start.</p>
+                        <p class="explanation_text_1">&emsp;&emsp;A spline-based system that allows level designers to create moving platforms using networked events. Adjustable settings include travel time between segments, wait times at each stop, and whether the platform cycles backwards or loops from the end to the start.</p>
                     </div>
                     <div class="col-md-6 centerContainer">
-                        <div class="image_bordered"><img src="images/WIP.png"></div>
+                        <div class="image_bordered"><img src="images/eidolon_movingPlatform.gif"></div>
                     </div>
                 </div>
                 <div class="row explanation_spacing">
@@ -280,7 +280,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <p class="explanation_title_1">DM_Divinity</p>
                         <ul>
                             <li class="explanation_bullet">Circular and ∞ Lane Layout</li>
@@ -295,7 +295,7 @@
                             <li class="explanation_bullet_indent">Bounce Pads</li>
                         </ul>
                     </div>
-                    <div class="col-md-6 centerContainer">
+                    <div class="col-md-8 centerContainer">
                         <div class="container">
                             <div id="my_slider_divinity" class="carousel slide project_page" data-ride="carousel" data-interval="0" data-bs-ride="carousel">
                                 <div class="carousel-inner">
@@ -367,7 +367,7 @@
                     </div>
                 </div>
                 <div class="row explanation_spacing">
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <p class="explanation_title_1">DM_Elevate</p>
                         <ul>
                             <li class="explanation_bullet">∞ Lane Layout</li>
@@ -382,7 +382,7 @@
                             <li class="explanation_bullet_indent">Moving Platforms</li>
                         </ul>
                     </div>
-                    <div class="col-md-6 centerContainer">
+                    <div class="col-md-8 centerContainer">
                         <div class="container explanation_spacing">
                             <div id="my_slider_elevate" class="carousel slide project_page" data-ride="carousel" data-interval="0" data-bs-ride="carousel">
                                 <div class="carousel-inner">
@@ -454,7 +454,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <p class="explanation_title_1">DM_Transcendence</p>
                         <ul>
                             <li class="explanation_bullet">Interconnected Multi-Circular Lane Layout</li>
@@ -469,7 +469,7 @@
                             <li class="explanation_bullet_indent">Bounce Pads</li>
                         </ul>
                     </div>
-                    <div class="col-md-6 centerContainer">
+                    <div class="col-md-8 centerContainer">
                         <div class="container explanation_spacing">
                             <div id="my_slider_transcendence" class="carousel slide project_page" data-ride="carousel" data-interval="0" data-bs-ride="carousel">
                                 <div class="carousel-inner">
@@ -541,7 +541,7 @@
                     </div>
                 </div>
                 <div class="row explanation_spacing">
-                    <div class="col-md-6">
+                    <div class="col-md-5">
                         <p class="explanation_title_1">Practice Range</p>
                         <ul>
                             <li class="explanation_bullet">Shows Off Each Card in a Firing Range Format</li>
@@ -557,7 +557,7 @@
                             <li class="explanation_bullet_indent">Utilize as a Testing Space During Development</li>
                         </ul>
                     </div>
-                    <div class="col-md-6 centerContainer">
+                    <div class="col-md-7 centerContainer">
                         <div class="container explanation_spacing">
                             <div id="my_slider_practicerange" class="carousel slide project_page" data-ride="carousel" data-interval="0" data-bs-ride="carousel">
                                 <div class="carousel-inner">
@@ -623,7 +623,7 @@
                         <p class="explanation_text_1">&emsp;&emsp;After collecting telemetry from matches, I wrote a script to parse the CSV data and visualize it by spawning colored cubes for killer and victim positions, drawing lines between them to indicate relativity. This provided level designers with a clear view of player interactions in 3D space, something a heatmap alone couldn’t convey.</p>
                     </div>
                     <div class="col-md-6 centerContainer">
-                        <div class="image_bordered"><img src="images/WIP.png"></div>
+                        <div class="image_bordered"><img src="images/eidolon_telem-1.png"></div>
                     </div>
                 </div>
                 <div class="row explanation_spacing">
@@ -632,7 +632,7 @@
                         <p class="explanation_text_1">&emsp;&emsp;I set up the positional tracker to record key data like positions, facing, timestamps, current life, client FPS, and player names. This allows level designers to filter and analyze player movement across lanes and spaces at different points in the match. These insights help identify underused or congested areas, enabling designers to adjust the level layout for better flow and optimize player engagement.</p>
                     </div>
                     <div class="col-md-6 centerContainer">
-                        <div class="image_bordered"><img src="images/WIP.png"></div>
+                        <div class="image_bordered"><img src="images/eidolon_telem-2.png"></div>
                     </div>
                 </div>
                 <div class="row explanation_spacing">
@@ -641,7 +641,7 @@
                         <p class="explanation_text_1">&emsp;&emsp;In addition to helping level designers optimize levels for players, the positional telemetry also revealed areas that needed improvement for bot navigation. By analyzing the data, we identified spots where additional nav links were required to allow bots to traverse more effectively. This insight enabled us to improve bot movement and, in turn, enhanced the overall level flow, leading to more dynamic interactions between bots and players.</p>
                     </div>
                     <div class="col-md-6 centerContainer">
-                        <div class="image_bordered"><img src="images/WIP.png"></div>
+                        <div class="image_bordered"><img src="images/eidolon_telem-3.png"></div>
                     </div>
                 </div>
                 <div class="row explanation_spacing">
@@ -650,7 +650,7 @@
                         <p class="explanation_text_1">&emsp;&emsp;To be able to efficiently display telemetry in a heatmap, I created a scalable grid-based system with an indexing function that maps 3D positions into a 1D array of data structures using C++ and Blueprints. This allows level designers to adjust the overall grid size and individual cell sizes to meet level needs while enabling efficient data retrieval for generating heatmaps in the editor.</p>
                     </div>
                     <div class="col-md-6 centerContainer">
-                        <div class="image_bordered"><img src="images/eidolon_telemVis-1.png"></div>
+                        <div class="image_bordered"><img src="images/eidolon_telem-4.png"></div>
                     </div>
                 </div>
                 <div class="row explanation_spacing">
@@ -659,7 +659,7 @@
                         <p class="explanation_text_1">&emsp;&emsp;The victim and killer heat map offers a dynamic, scalable view of player interactions, highlighting areas with frequent deaths and concentrated kills. By feeding the data into a material and adjusting alpha for color and opacity, I highlighted kill and death zones, helping identify potential power positions or overly dangerous areas. This heat map offers valuable insights for informing level adjustments, ensuring balanced encounters and adherence to the intended level design.</p>
                     </div>
                     <div class="col-md-6 centerContainer">
-                        <div class="image_bordered"><img src="images/WIP.png"></div>
+                        <div class="image_bordered"><img src="images/eidolon_telem-5.png"></div>
                     </div>
                 </div>
                 <div class="row explanation_spacing">
@@ -668,7 +668,7 @@
                         <p class="explanation_text_1">&emsp;&emsp;The positional heat map groups player and bot positions, offering insight into underutilized or overrun areas and paths. By feeding position data into the material’s alpha channel, areas with higher foot traffic become darker, helping to visualize where players may naturally converge. This is especially useful for identifying power positions and detecting where specific players might be camping by filtering data by player names for a given match.</p>
                     </div>
                     <div class="col-md-6 centerContainer">
-                        <div class="image_bordered"><img src="images/WIP.png"></div>
+                        <div class="image_bordered"><img src="images/eidolon_telem-6.png"></div>
                     </div>
                 </div>
                 <div class="row explanation_spacing">
