@@ -199,56 +199,56 @@
                     </div>
                 </div>
                 <div class="row explanation_spacing ">
-                    <div class="col-md-6">
+                    <div class="col-md-5">
                         <p class="explanation_title_1">Player Spawning System</p>
                         <p class="explanation_text_1">&emsp;&emsp;To optimize player spawning, the system evaluates each spawn position relative to active enemy combatants. Spawn positions are then scored based on distance from these combatants, with a penalty applied if the position is within their line of sight. This ensures players spawn out of sight and as far from combat as possible in order for them to gather more resources throughout the map before entering another engagement.</p>
                     </div>
-                    <div class="col-md-6 centerContainer">
+                    <div class="col-md-7 centerContainer">
                         <div class="image_bordered"><img src="images/eidolon_playerSpawner2.gif"></div>
                     </div>
                 </div>
                 <div class="row explanation_spacing ">
-                    <div class="col-md-6">
+                    <div class="col-md-5">
                         <p class="explanation_title_1">Weapon Spawning System</p>
                         <p class="explanation_text_1">&emsp;&emsp;Weapons, represented as tarot cards, spawn at designated locations. Each spawn point references a data table that holds a pool of available cards. Cards are selected via weighted random rolls, with cooldown times determined by the data table. This system allows system and level designers alike to balance weapon distribution and spawn rates throughout the map.</p>
                     </div>
-                    <div class="col-md-6 centerContainer">
+                    <div class="col-md-7 centerContainer">
                         <div class="image_bordered"><img src="images/eidolon_cardSpawner2.gif"></div>
                     </div>
                 </div>
                 <div class="row explanation_spacing ">
-                    <div class="col-md-6">
+                    <div class="col-md-5">
                         <p class="explanation_title_1">Bounce Pads</p>
                         <p class="explanation_text_1">&emsp;&emsp;Bounce pads apply an adjustable vertical impulse to combatants and projectiles. Projectiles also retain a configurable percentage of their horizontal velocity, preserving momentum and enabling controlled redirection for fun player interactions.</p>
                     </div>
-                    <div class="col-md-6 centerContainer">
+                    <div class="col-md-7 centerContainer">
                         <div class="image_bordered"><img src="images/eidolon_bouncePad.gif"></div>
                     </div>
                 </div>
                 <div class="row explanation_spacing ">
-                    <div class="col-md-6">
+                    <div class="col-md-5">
                         <p class="explanation_title_1">Propulsion Lifts</p>
                         <p class="explanation_text_1">&emsp;&emsp;A spline-based system that allows level designers to create gravity lifts throughout the map. Segments are dynamically placed along the spline, with adjustable parameters for segment spacing, size, and launch speed. Combatants and projectiles move through sequential segments until they reach the final exit segment, where the exit direction and speed can be customized for players and projectiles separately.</p>
                     </div>
-                    <div class="col-md-6 centerContainer">
+                    <div class="col-md-7 centerContainer">
                         <div class="image_bordered"><img src="images/eidolon_propulsionLift.gif"></div>
                     </div>
                 </div>
                 <div class="row explanation_spacing">
-                    <div class="col-md-6">
+                    <div class="col-md-5">
                         <p class="explanation_title_1">Moving Platforms</p>
                         <p class="explanation_text_1">&emsp;&emsp;A spline-based system that allows level designers to create moving platforms using networked events. Adjustable settings include travel time between segments, wait times at each stop, and whether the platform cycles backwards or loops from the end to the start.</p>
                     </div>
-                    <div class="col-md-6 centerContainer">
+                    <div class="col-md-7 centerContainer">
                         <div class="image_bordered"><img src="images/eidolon_movingPlatform.gif"></div>
                     </div>
                 </div>
                 <div class="row explanation_spacing">
-                    <div class="col-md-6">
+                    <div class="col-md-5">
                         <p class="explanation_title_1">Inverse Moon (Power Weapon) - 1v1 Arena</p>
                         <p class="explanation_text_1">&emsp;&emsp;This mechanic acts as the inverted ability of The Moon, the game’s second power weapon. Upon activation, the initiating and targeted combatant are transported to an isolated arena, where they receive identical cards. A brief introduction sequence occurs, allowing the combatants to see their opponent before the arena walls rise and gradually lower as the duel begins. The winner of the duel claims a fully recharched Moon card, and both players return to the main match, continuing the lunar cycle.</p>
                     </div>
-                    <div class="col-md-6 centerContainer">
+                    <div class="col-md-7 centerContainer">
                         <div class="image_bordered"><img src="images/eidolon_moonArena.gif"></div>
                     </div>
                 </div>
@@ -618,56 +618,56 @@
                     <p class="explanation_text_1">&emsp;&emsp;In fast-paced arena shooters, level readability, engagement flow, and performance stability are critical to ensuring a smooth player experience. To better understand how players and bots were engaging with levels, I developed a telemetry visualization tool that collects and displays in-game data directly within Unreal Engine 5.4. This allowed me to analyze movement patterns and lane utilization, high kill zones and possible power positions, and client FPS performance after playtests were conducted. Using this tool, I identified map traversal inefficiencies for both players and bots, spawn imbalances, and performance bottlenecks, leading to key optimizations across multiple levels.</p>
                 </div>
                 <div class="row explanation_spacing">
-                    <div class="col-md-6">
+                    <div class="col-md-5">
                         <p class="explanation_title_1">Displaying Kill & Death Data</p>
                         <p class="explanation_text_1">&emsp;&emsp;After collecting telemetry from matches, I wrote a script to parse the CSV data and visualize it by spawning colored cubes for killer and victim positions, drawing lines between them to indicate relativity. This provided level designers with a clear view of player interactions in 3D space, something a heatmap alone couldn’t convey.</p>
                     </div>
-                    <div class="col-md-6 centerContainer">
+                    <div class="col-md-7 centerContainer">
                         <div class="image_bordered"><img src="images/eidolon_telem-1.png"></div>
                     </div>
                 </div>
                 <div class="row explanation_spacing">
-                    <div class="col-md-6">
+                    <div class="col-md-5">
                         <p class="explanation_title_1">Displaying Positional Data - Players</p>
                         <p class="explanation_text_1">&emsp;&emsp;I set up the positional tracker to record key data like positions, facing, timestamps, current life, client FPS, and player names. This allows level designers to filter and analyze player movement across lanes and spaces at different points in the match. These insights help identify underused or congested areas, enabling designers to adjust the level layout for better flow and optimize player engagement.</p>
                     </div>
-                    <div class="col-md-6 centerContainer">
+                    <div class="col-md-7 centerContainer">
                         <div class="image_bordered"><img src="images/eidolon_telem-2.png"></div>
                     </div>
                 </div>
                 <div class="row explanation_spacing">
-                    <div class="col-md-6">
+                    <div class="col-md-5">
                         <p class="explanation_title_1">Displaying Positional Data - Bots</p>
                         <p class="explanation_text_1">&emsp;&emsp;In addition to helping level designers optimize levels for players, the positional telemetry also revealed areas that needed improvement for bot navigation. By analyzing the data, we identified spots where additional nav links were required to allow bots to traverse more effectively. This insight enabled us to improve bot movement and, in turn, enhanced the overall level flow, leading to more dynamic interactions between bots and players.</p>
                     </div>
-                    <div class="col-md-6 centerContainer">
+                    <div class="col-md-7 centerContainer">
                         <div class="image_bordered"><img src="images/eidolon_telem-3.png"></div>
                     </div>
                 </div>
                 <div class="row explanation_spacing">
-                    <div class="col-md-6">
+                    <div class="col-md-5">
                         <p class="explanation_title_1">Telemetry Grouping</p>
                         <p class="explanation_text_1">&emsp;&emsp;To be able to efficiently display telemetry in a heatmap, I created a scalable grid-based system with an indexing function that maps 3D positions into a 1D array of data structures using C++ and Blueprints. This allows level designers to adjust the overall grid size and individual cell sizes to meet level needs while enabling efficient data retrieval for generating heatmaps in the editor.</p>
                     </div>
-                    <div class="col-md-6 centerContainer">
+                    <div class="col-md-7 centerContainer">
                         <div class="image_bordered"><img src="images/eidolon_telem-4.png"></div>
                     </div>
                 </div>
                 <div class="row explanation_spacing">
-                    <div class="col-md-6">
+                    <div class="col-md-5">
                         <p class="explanation_title_1">Kill & Death Heatmaps</p>
                         <p class="explanation_text_1">&emsp;&emsp;The victim and killer heat map offers a dynamic, scalable view of player interactions, highlighting areas with frequent deaths and concentrated kills. By feeding the data into a material and adjusting alpha for color and opacity, I highlighted kill and death zones, helping identify potential power positions or overly dangerous areas. This heat map offers valuable insights for informing level adjustments, ensuring balanced encounters and adherence to the intended level design.</p>
                     </div>
-                    <div class="col-md-6 centerContainer">
+                    <div class="col-md-7 centerContainer">
                         <div class="image_bordered"><img src="images/eidolon_telem-5.png"></div>
                     </div>
                 </div>
                 <div class="row explanation_spacing">
-                    <div class="col-md-6">
+                    <div class="col-md-5">
                         <p class="explanation_title_1">Positional Heatmap</p>
                         <p class="explanation_text_1">&emsp;&emsp;The positional heat map groups player and bot positions, offering insight into underutilized or overrun areas and paths. By feeding position data into the material’s alpha channel, areas with higher foot traffic become darker, helping to visualize where players may naturally converge. This is especially useful for identifying power positions and detecting where specific players might be camping by filtering data by player names for a given match.</p>
                     </div>
-                    <div class="col-md-6 centerContainer">
+                    <div class="col-md-7 centerContainer">
                         <div class="image_bordered"><img src="images/eidolon_telem-6.png"></div>
                     </div>
                 </div>
