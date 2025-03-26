@@ -132,709 +132,711 @@
                     </div>
                 </div>
             </div>
+            <!--
             <a class="carousel-control-prev" href="#my_slider" role="button" data-slide="prev">
                 <i class="fa fa-angle-left"></i>
             </a>
             <a class="carousel-control-next" href="#my_slider" role="button" data-slide="next">
                 <i class="fa fa-angle-right"></i>
             </a>
+            -->
         </div>
     </div>
     <!-- slides section end -->
-    <!-- decription section start -->
-    <div class="projectpage_section_desc layout_padding">
-        <div class="container">
-            <div class="row">
-                <h1 class="projectpage_gametitle"><i>Eidolon Fate of Fools</i></h1>
-                <hr>
-                <h1 class="projectpage_roletitle">Technical Level Designer</h1>
-                <h1 class="projectpage_roletitle">Gameplay Programmer</h1>
-                <hr>
+            <!-- decription section start -->
+            <div class="projectpage_section_desc layout_padding">
+                <div class="container">
+                    <div class="row">
+                        <h1 class="projectpage_gametitle"><i>Eidolon Fate of Fools</i></h1>
+                        <hr>
+                        <h1 class="projectpage_roletitle">Technical Level Designer</h1>
+                        <h1 class="projectpage_roletitle">Gameplay Programmer</h1>
+                        <hr>
+                    </div>
+                    <div class="row layout_padding">
+                        <div class="col-md-6">
+                            <h1 class="projectpage_subtitle">Details</h1>
+                            <ul>
+                                <li class="project_bullet">9 Person Team</li>
+                                <li class="project_bullet">Built in Unreal Engine 5.4</li>
+                                <li class="project_bullet">Academic Game Project</li>
+                                <li class="project_bullet">August 2024 - Present</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h1 class="projectpage_subtitle">My Contributions</h1>
+                            <ul>
+                                <li class="project_bullet">Engineered C++ and Blueprint scripts to visualize telemetry data for grid-based heatmap analysis of player fps and level metrics.</li>
+                                <li class="project_bullet">Grayboxed and iterated on 3 multiplayer FFA arena maps and a practice range, integrating gameplay and level features based on level design pillars to encourage strategic player movement.</li>
+                                <li class="project_bullet_indent">Structured level geometry to promote skill expression through gunplay and movement mechanics.</li>
+                                <li class="project_bullet_indent">Adhered to the game pillar, "It's Fast to Flow," by designing lanes and loops for fluid and dynamic movement abilities.</li>
+                                <li class="project_bullet_indent">Designed distinct areas using color schemes, lighting, and landmarks to guide players and enhance level flow.</li>
+                                <li class="project_bullet">Developed networked arena mechanics:</li>
+                                <li class="project_bullet_indent">Player Spawning System</li>
+                                <li class="project_bullet_indent">Weapon Spawning System</li>
+                                <li class="project_bullet_indent">Bounce Pads</li>
+                                <li class="project_bullet_indent">Propulsion Lifts</li>
+                                <li class="project_bullet_indent">Moving Platforms</li>
+                                <li class="project_bullet_indent">Moon Power Weapon 1v1 Arena</li>
+                                <li class="project_bullet">Utilized Unreal's GAS (Gameplay Ability System) to bring power weapons and abilities to life.</li>
+                                <li class="project_bullet">Coordinated playtests of LAN and Steam network systems, including a 40+ person public stress test to validate technical performance.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="targetBackToTopSection" class="toggle-button-container layout_padding">
+                        <button class="toggle-page-button col-md-3 active" data-section="eid_tools-toggle" onclick="setAndShowSection('eid_tools-toggle', this)">Tools</button>
+                        <button class="toggle-page-button col-md-3" data-section="eid_levels-toggle" onclick="setAndShowSection('eid_levels-toggle', this)">Levels</button>
+                        <button class="toggle-page-button col-md-3" data-section="eid_mechanics-toggle" onclick="setAndShowSection('eid_mechanics-toggle', this)">Mechanics</button>
+                    </div>
+                    <div class="toggle eid_mechanics-toggle" style="display: none;">
+                        <div class="row explanation_spacing">
+                            <h1 class="projectpage_gametitle"><i>Implementation in Review - Mechanics</i></h1>
+                            <hr>
+                            <h1 class="projectpage_roletitle">Creating Engaging Networked Multiplayer Arena Mechanics</h1>
+                            <hr>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="embed_container"><iframe src="https://www.youtube.com/embed/u2tJzde_Dyc?si=mlLDDpdc-hW1-SBg?rel=0" title="Eidolon Level Mechanics Feature" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+                            </div>
+                        </div>
+                        <div class="row explanation_spacing ">
+                            <div class="col-md-5">
+                                <p class="explanation_title_1">Player Spawning System</p>
+                                <p class="explanation_text_1">&emsp;&emsp;To optimize player spawning, the system evaluates each spawn position relative to active enemy combatants. Spawn positions are then scored based on distance from these combatants, with a penalty applied if the position is within their line of sight. This ensures players spawn out of sight and as far from combat as possible in order for them to gather more resources throughout the map before entering another engagement.</p>
+                            </div>
+                            <div class="col-md-7 centerContainer">
+                                <div class="image_bordered"><img src="images/eidolon_playerSpawner2.gif"></div>
+                            </div>
+                        </div>
+                        <div class="row explanation_spacing ">
+                            <div class="col-md-5">
+                                <p class="explanation_title_1">Weapon Spawning System</p>
+                                <p class="explanation_text_1">&emsp;&emsp;Weapons, represented as tarot cards, spawn at designated locations. Each spawn point references a data table that holds a pool of available cards. Cards are selected via weighted random rolls, with cooldown times determined by the data table. This system allows system and level designers alike to balance weapon distribution and spawn rates throughout the map.</p>
+                            </div>
+                            <div class="col-md-7 centerContainer">
+                                <div class="image_bordered"><img src="images/eidolon_cardSpawner2.gif"></div>
+                            </div>
+                        </div>
+                        <div class="row explanation_spacing ">
+                            <div class="col-md-5">
+                                <p class="explanation_title_1">Bounce Pads</p>
+                                <p class="explanation_text_1">&emsp;&emsp;Bounce pads apply an adjustable vertical impulse to combatants and projectiles. Projectiles also retain a configurable percentage of their horizontal velocity, preserving momentum and enabling controlled redirection for fun player interactions.</p>
+                            </div>
+                            <div class="col-md-7 centerContainer">
+                                <div class="image_bordered"><img src="images/eidolon_bouncePad.gif"></div>
+                            </div>
+                        </div>
+                        <div class="row explanation_spacing ">
+                            <div class="col-md-5">
+                                <p class="explanation_title_1">Propulsion Lifts</p>
+                                <p class="explanation_text_1">&emsp;&emsp;A spline-based system that allows level designers to create gravity lifts throughout the map. Segments are dynamically placed along the spline, with adjustable parameters for segment spacing, size, and launch speed. Combatants and projectiles move through sequential segments until they reach the final exit segment, where the exit direction and speed can be customized for players and projectiles separately.</p>
+                            </div>
+                            <div class="col-md-7 centerContainer">
+                                <div class="image_bordered"><img src="images/eidolon_propulsionLift.gif"></div>
+                            </div>
+                        </div>
+                        <div class="row explanation_spacing">
+                            <div class="col-md-5">
+                                <p class="explanation_title_1">Moving Platforms</p>
+                                <p class="explanation_text_1">&emsp;&emsp;A spline-based system that allows level designers to create moving platforms using networked events. Adjustable settings include travel time between segments, wait times at each stop, and whether the platform cycles backwards or loops from the end to the start.</p>
+                            </div>
+                            <div class="col-md-7 centerContainer">
+                                <div class="image_bordered"><img src="images/eidolon_movingPlatform.gif"></div>
+                            </div>
+                        </div>
+                        <div class="row explanation_spacing">
+                            <div class="col-md-5">
+                                <p class="explanation_title_1">Inverse Moon (Power Weapon) - 1v1 Arena</p>
+                                <p class="explanation_text_1">&emsp;&emsp;This mechanic acts as the inverted ability of The Moon, the game’s second power weapon. Upon activation, the initiating and targeted combatant are transported to an isolated arena, where they receive identical cards. A brief introduction sequence occurs, allowing the combatants to see their opponent before the arena walls rise and gradually lower as the duel begins. The winner of the duel claims a fully recharched Moon card, and both players return to the main match, continuing the lunar cycle.</p>
+                            </div>
+                            <div class="col-md-7 centerContainer">
+                                <div class="image_bordered"><img src="images/eidolon_moonArena.gif"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="toggle eid_levels-toggle" style="display: none;">
+                        <div class="row explanation_spacing">
+                            <h1 class="projectpage_gametitle"><i>Implementation in Review - Levels</i></h1>
+                            <hr>
+                            <h1 class="projectpage_roletitle">Designing Multiplayer Arenas for People and Bots Alike</h1>
+                            <hr>
+                        </div>
+                        <div class="row explanation_spacing">
+                            <div class="col-md-6">
+                                <p class="explanation_title_1">Why Make Levels as a Technical Designer?</p>
+                                <p class="explanation_text_1">&emsp;&emsp;On top of building the tools and mechanics, being a Technical Designer means ensuring that the things you make for the team are intuitive, effective, and seamlessly integrate into the development process. For this project, I served as the bridge between the tech team and our level designer, who joined later in development. This meant I needed to understand not only how easy my tools were to use but also their limitations before handing them off. </p>
+                                <p class="explanation_text_1">&emsp;&emsp;Designing levels myself gave me direct experience with multiplayer level design, expanded my technical vocabulary for communicating with level designers, and provided valuable insight into how players interacted with different spaces and mechanics. It also helped me identify where certain mechanics excelled and where others fell short.</p>
+                                <p class="explanation_text_1">&emsp;&emsp;This process allowed me to refine my tools and systems to better support our level team, making it easier for them to shape gameplay as they intended. It also meant I could anticipate design needs, communicate limitations early, and prevent roadblocks before they occurred. Through this project, I not only deepened my own understanding of level design but also helped ensure the game's mechanics and environments worked together as one cohesive experience, enabling others to do their best work.</p>
+                            </div>
+                            <div class="col-md-6">
+                                <p class="explanation_title_1">Level Pillars:</p>
+                                <ul>
+                                    <li class="project_bullet">Unbroken Momentum</li>
+                                    <li class="project_bullet_indent">Each map should maintain strong flow between areas. Any given location should provide at least three viable movement options to ensure fluid player navigation throughout the arena.</li>
+                                    <li class="project_bullet">Expansive Arenas</li>
+                                    <li class="project_bullet_indent">Multiple areas of the map should remain relevant and see active play, preventing a single dominant location from dictating engagements.</li>
+                                    <li class="project_bullet">Limited Domination Space</li>
+                                    <li class="project_bullet_indent">Power positions should provide advantages without allowing prolonged control over engagements. Sightlines, cover, lack of weapon resources, and counterplay options should ensure no single location becomes an unchallenged stronghold.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <p class="explanation_title_1">DM_Divinity</p>
+                                <ul>
+                                    <li class="explanation_bullet">Circular and ∞ Lane Layout</li>
+                                    <li class="explanation_bullet">Medium Time to Engagement</li>
+                                    <li class="explanation_bullet">Environmental Features:</li>
+                                    <li class="explanation_bullet_indent">Central Coloseum with Rotating Platform</li>
+                                    <li class="explanation_bullet_indent">Elevated Power Spawner Requiring Dash or Card Ability Use</li>
+                                    <li class="explanation_bullet_indent">Outer Edge Rotate</li>
+                                    <li class="explanation_bullet_indent">Strategic Dash Points</li>
+                                    <li class="explanation_bullet">Utilized Level Mechanics:</li>
+                                    <li class="explanation_bullet_indent">Rotating Center Platform</li>
+                                    <li class="explanation_bullet_indent">Bounce Pads</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-8 centerContainer">
+                                <div class="container">
+                                    <div id="my_slider_divinity" class="carousel slide project_page" data-ride="carousel" data-interval="0" data-bs-ride="carousel">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="embed_container image_bordered"><iframe src="https://www.youtube.com/embed/QlRMrhPsGZM?si=63hVi7xLRb_u1TXS?rel=0" title="Eidolon: Fate of Fools Divinity Feature" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="image_bordered"><img src="images/eidolon_div-1.png"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="image_bordered"><img src="images/eidolon_div-2.png"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="image_bordered"><img src="images/eidolon_div-3.png"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="image_bordered"><img src="images/eidolon_div-4.png"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="image_bordered"><img src="images/eidolon_div-5.png"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="image_bordered"><img src="images/eidolon_div-6.png"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="image_bordered"><img src="images/eidolon_div-7.png"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="carousel-control-prev" href="#my_slider_divinity" role="button" data-slide="prev">
+                                        <i class="fa fa-angle-left"></i>
+                                    </a>
+                                    <a class="carousel-control-next" href="#my_slider_divinity" role="button" data-slide="next">
+                                        <i class="fa fa-angle-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row explanation_spacing">
+                            <div class="col-md-4">
+                                <p class="explanation_title_1">DM_Elevate</p>
+                                <ul>
+                                    <li class="explanation_bullet">∞ Lane Layout</li>
+                                    <li class="explanation_bullet">Low Time to Engagement</li>
+                                    <li class="explanation_bullet">Environmental Features:</li>
+                                    <li class="explanation_bullet_indent">Laser-Tag Arena Style Ground Level</li>
+                                    <li class="explanation_bullet_indent">Rising Platforms with Weapon Spawners</li>
+                                    <li class="explanation_bullet_indent">Propulsion Lift to Top Level</li>
+                                    <li class="explanation_bullet_indent">Outer Rocket Jump Platform</li>
+                                    <li class="explanation_bullet">Utilized Level Mechanics:</li>
+                                    <li class="explanation_bullet_indent">Propulsion Lift</li>
+                                    <li class="explanation_bullet_indent">Moving Platforms</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-8 centerContainer">
+                                <div class="container explanation_spacing">
+                                    <div id="my_slider_elevate" class="carousel slide project_page" data-ride="carousel" data-interval="0" data-bs-ride="carousel">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="embed_container image_bordered"><iframe src="https://www.youtube.com/embed/vbnDpP5YXZE?si=KXmIiqX-h1WnhJaP?rel=0" title="Eidolon: Fate of Fools Elevate Feature" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="image_bordered"><img src="images/eidolon_ele-1.png"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="image_bordered"><img src="images/eidolon_ele-2.png"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="image_bordered"><img src="images/eidolon_ele-3.png"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="image_bordered"><img src="images/eidolon_ele-4.png"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="image_bordered"><img src="images/eidolon_ele-5.png"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="image_bordered"><img src="images/eidolon_ele-6.png"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="image_bordered"><img src="images/eidolon_ele-7.png"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="carousel-control-prev" href="#my_slider_elevate" role="button" data-slide="prev">
+                                        <i class="fa fa-angle-left"></i>
+                                    </a>
+                                    <a class="carousel-control-next" href="#my_slider_elevate" role="button" data-slide="next">
+                                        <i class="fa fa-angle-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <p class="explanation_title_1">DM_Transcendence</p>
+                                <ul>
+                                    <li class="explanation_bullet">Interconnected Multi-Circular Lane Layout</li>
+                                    <li class="explanation_bullet">Medium-High Time to Engagement</li>
+                                    <li class="explanation_bullet">Environmental Features:</li>
+                                    <li class="explanation_bullet_indent">Central Propulsion Lift</li>
+                                    <li class="explanation_bullet_indent">Central Tower and Power Platform</li>
+                                    <li class="explanation_bullet_indent">3 Distinct Rising Towers</li>
+                                    <li class="explanation_bullet_indent">3 Additional Connecting Areas</li>
+                                    <li class="explanation_bullet">Utilized Level Mechanics:</li>
+                                    <li class="explanation_bullet_indent">Propulsion Lift</li>
+                                    <li class="explanation_bullet_indent">Bounce Pads</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-8 centerContainer">
+                                <div class="container explanation_spacing">
+                                    <div id="my_slider_transcendence" class="carousel slide project_page" data-ride="carousel" data-interval="0" data-bs-ride="carousel">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="embed_container image_bordered"><iframe src="https://www.youtube.com/embed/2SmDtqQbMa8?si=t53rrUNdOAGH7tLA?rel=0" title="Eidolon: Fate of Fools Transcendence Feature" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="image_bordered"><img src="images/eidolon_trans-1.png"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="image_bordered"><img src="images/eidolon_trans-2.png"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="image_bordered"><img src="images/eidolon_trans-3.png"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="image_bordered"><img src="images/eidolon_trans-4.png"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="image_bordered"><img src="images/eidolon_trans-5.png"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="image_bordered"><img src="images/eidolon_trans-6.png"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="image_bordered"><img src="images/eidolon_trans-7.png"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="carousel-control-prev" href="#my_slider_transcendence" role="button" data-slide="prev">
+                                        <i class="fa fa-angle-left"></i>
+                                    </a>
+                                    <a class="carousel-control-next" href="#my_slider_transcendence" role="button" data-slide="next">
+                                        <i class="fa fa-angle-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row explanation_spacing">
+                            <div class="col-md-5">
+                                <p class="explanation_title_1">Practice Range</p>
+                                <ul>
+                                    <li class="explanation_bullet">Shows Off Each Card in a Firing Range Format</li>
+                                    <li class="explanation_bullet">Segmented to Highlight Card Utility:</li>
+                                    <li class="explanation_bullet_indent">Bouncing Projectile Area</li>
+                                    <li class="explanation_bullet_indent">Vertical Movement Utility Area</li>
+                                    <li class="explanation_bullet_indent">Rocket Jump, Knockback, and Slam Area</li>
+                                    <li class="explanation_bullet_indent">Chariot Sniping Range</li>
+                                    <li class="explanation_bullet_indent">Projectile Interaction Areas for Propulsion Lifts & Bounce Pads</li>
+                                    <li class="explanation_bullet">Purpose:</li>
+                                    <li class="explanation_bullet_indent">Allow a Space for Players to Try Out Weapons</li>
+                                    <li class="explanation_bullet_indent">Teach Players Spots to Utilize Card Abilities</li>
+                                    <li class="explanation_bullet_indent">Utilize as a Testing Space During Development</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-7 centerContainer">
+                                <div class="container explanation_spacing">
+                                    <div id="my_slider_practicerange" class="carousel slide project_page" data-ride="carousel" data-interval="0" data-bs-ride="carousel">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="image_bordered"><img src="images/eidolon_pr-4.png"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="image_bordered"><img src="images/eidolon_pr-1.png"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="image_bordered"><img src="images/eidolon_pr-2.png"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="image_bordered"><img src="images/eidolon_pr-3.png"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="carousel-control-prev" href="#my_slider_practicerange" role="button" data-slide="prev">
+                                        <i class="fa fa-angle-left"></i>
+                                    </a>
+                                    <a class="carousel-control-next" href="#my_slider_practicerange" role="button" data-slide="next">
+                                        <i class="fa fa-angle-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="toggle eid_tools-toggle" style="display: block;">
+                        <div class="row explanation_spacing">
+                            <h1 class="projectpage_gametitle"><i>Implementation in Review - Tools</i></h1>
+                            <hr>
+                            <h1 class="projectpage_roletitle">Refining Levels and Optimizing Client FPS through Telemetry Visualization Tools</h1>
+                            <hr>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="embed_container"><iframe src="https://www.youtube.com/embed/pY2anb874qo?si=s-UuywefEZMbjpGS?rel=0" title="Eidolon Level Tools Feature" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+                            </div>
+                        </div>
+                        <div class="row explanation_spacing">
+                            <h1 class="explanation_title_1">Purpose of Telemetry Collection and Visualization</h1>
+                            <p class="explanation_text_1">&emsp;&emsp;In fast-paced arena shooters, level readability, engagement flow, and performance stability are critical to ensuring a smooth player experience. To better understand how players and bots were engaging with levels, I developed a telemetry visualization tool that collects and displays in-game data directly within Unreal Engine 5.4. This allowed me to analyze movement patterns and lane utilization, high kill zones and possible power positions, and client FPS performance after playtests were conducted. Using this tool, I identified map traversal inefficiencies for both players and bots, spawn imbalances, and performance bottlenecks, leading to key optimizations across multiple levels.</p>
+                        </div>
+                        <div class="row explanation_spacing">
+                            <div class="col-md-5">
+                                <p class="explanation_title_1">Displaying Kill & Death Data</p>
+                                <p class="explanation_text_1">&emsp;&emsp;After collecting telemetry from matches, I wrote a script to parse the CSV data and visualize it by spawning colored cubes for killer and victim positions, drawing lines between them to indicate relativity. This provided level designers with a clear view of player interactions in 3D space, something a heatmap alone couldn’t convey.</p>
+                            </div>
+                            <div class="col-md-7 centerContainer">
+                                <div class="image_bordered"><img src="images/eidolon_telem-1.png"></div>
+                            </div>
+                        </div>
+                        <div class="row explanation_spacing">
+                            <div class="col-md-5">
+                                <p class="explanation_title_1">Displaying Positional Data - Players</p>
+                                <p class="explanation_text_1">&emsp;&emsp;I set up the positional tracker to record key data like positions, facing, timestamps, current life, client FPS, and player names. This allows level designers to filter and analyze player movement across lanes and spaces at different points in the match. These insights help identify underused or congested areas, enabling designers to adjust the level layout for better flow and optimize player engagement.</p>
+                            </div>
+                            <div class="col-md-7 centerContainer">
+                                <div class="image_bordered"><img src="images/eidolon_telem-2.png"></div>
+                            </div>
+                        </div>
+                        <div class="row explanation_spacing">
+                            <div class="col-md-5">
+                                <p class="explanation_title_1">Displaying Positional Data - Bots</p>
+                                <p class="explanation_text_1">&emsp;&emsp;In addition to helping level designers optimize levels for players, the positional telemetry also revealed areas that needed improvement for bot navigation. By analyzing the data, we identified spots where additional nav links were required to allow bots to traverse more effectively. This insight enabled us to improve bot movement and, in turn, enhanced the overall level flow, leading to more dynamic interactions between bots and players.</p>
+                            </div>
+                            <div class="col-md-7 centerContainer">
+                                <div class="image_bordered"><img src="images/eidolon_telem-3.png"></div>
+                            </div>
+                        </div>
+                        <div class="row explanation_spacing">
+                            <div class="col-md-5">
+                                <p class="explanation_title_1">Telemetry Grouping</p>
+                                <p class="explanation_text_1">&emsp;&emsp;To be able to efficiently display telemetry in a heatmap, I created a scalable grid-based system with an indexing function that maps 3D positions into a 1D array of data structures using C++ and Blueprints. This allows level designers to adjust the overall grid size and individual cell sizes to meet level needs while enabling efficient data retrieval for generating heatmaps in the editor.</p>
+                            </div>
+                            <div class="col-md-7 centerContainer">
+                                <div class="image_bordered"><img src="images/eidolon_telem-4.png"></div>
+                            </div>
+                        </div>
+                        <div class="row explanation_spacing">
+                            <div class="col-md-5">
+                                <p class="explanation_title_1">Kill & Death Heatmaps</p>
+                                <p class="explanation_text_1">&emsp;&emsp;The victim and killer heat map offers a dynamic, scalable view of player interactions, highlighting areas with frequent deaths and concentrated kills. By feeding the data into a material and adjusting alpha for color and opacity, I highlighted kill and death zones, helping identify potential power positions or overly dangerous areas. This heat map offers valuable insights for informing level adjustments, ensuring balanced encounters and adherence to the intended level design.</p>
+                            </div>
+                            <div class="col-md-7 centerContainer">
+                                <div class="image_bordered"><img src="images/eidolon_telem-5.png"></div>
+                            </div>
+                        </div>
+                        <div class="row explanation_spacing">
+                            <div class="col-md-5">
+                                <p class="explanation_title_1">Positional Heatmap</p>
+                                <p class="explanation_text_1">&emsp;&emsp;The positional heat map groups player and bot positions, offering insight into underutilized or overrun areas and paths. By feeding position data into the material’s alpha channel, areas with higher foot traffic become darker, helping to visualize where players may naturally converge. This is especially useful for identifying power positions and detecting where specific players might be camping by filtering data by player names for a given match.</p>
+                            </div>
+                            <div class="col-md-7 centerContainer">
+                                <div class="image_bordered"><img src="images/eidolon_telem-6.png"></div>
+                            </div>
+                        </div>
+                        <div class="row explanation_spacing">
+                            <p class="explanation_title_1">Optimizing Levels for Client FPS</p>
+                            <p class="explanation_text_1">&emsp;&emsp;While working on the positional telemetry visualizer, I realized that adding client FPS data alongside player positions and facing could provide valuable insights for performance optimization. Since I was already collecting other key data at regular intervals for visualization, incorporating this extra layer was relatively simple. After running large-scale 7-player playtests on each map, I filtered the data to focus on the lowest 5% of FPS per client, which proved more effective than using mean or median FPS per client in identifying performance bottlenecks. This approach enabled us to pinpoint areas in need of optimization, particularly with lighting and shader usage in our levels.</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 centerContainer">
+                                <div class="image_bordered"><img src="images/eidolon_telemVisDiv-1.png"></div>
+                            </div>
+                            <div class="col-md-6 centerContainer">
+                                <div class="container">
+                                    <div id="my_slider_telemDiv" class="carousel slide project_page" data-ride="carousel" data-interval="0" data-bs-ride="carousel">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="image_bordered"><img src="images/eidolon_telemVisDiv-2.png"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="image_bordered"><img src="images/eidolon_telemVisDiv-3.png"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="carousel-control-prev" href="#my_slider_telemDiv" role="button" data-slide="prev">
+                                        <i class="fa fa-angle-left"></i>
+                                    </a>
+                                    <a class="carousel-control-next" href="#my_slider_telemDiv" role="button" data-slide="next">
+                                        <i class="fa fa-angle-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <p class="image_text_1">&emsp;&emsp;Filtering the lowest 5% FPS per client revealed consistent slowdowns near the center of DM_Divinity. Seeing that players faced all directions in this area ruled out the central rotating platform, leading to an investigation of lighting, which turned out to be the cause.</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 centerContainer">
+                                <div class="image_bordered"><img src="images/eidolon_telemVisApo-1.png"></div>
+                            </div>
+                            <div class="col-md-6 centerContainer">
+                                <div class="container">
+                                    <div id="my_slider_telemApo" class="carousel slide project_page" data-ride="carousel" data-interval="0" data-bs-ride="carousel">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="image_bordered"><img src="images/eidolon_telemVisApo-2.png"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="image_bordered"><img src="images/eidolon_telemVisApo-3.png"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="carousel-control-prev" href="#my_slider_telemApo" role="button" data-slide="prev">
+                                        <i class="fa fa-angle-left"></i>
+                                    </a>
+                                    <a class="carousel-control-next" href="#my_slider_telemApo" role="button" data-slide="next">
+                                        <i class="fa fa-angle-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <p class="image_text_1">&emsp;&emsp;For DM_Apotheosis, FPS drops weren’t as noticeable during playtests, but the tool revealed clusters of low FPS scattered across the map. Filtering the data showed consistent low client FPS in specific areas, leading us to investigate lighting—confirming it as the main cause of the performance issues on this map.</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 centerContainer">
+                                <div class="image_bordered"><img src="images/eidolon_telemVisTrans-1.png"></div>
+                            </div>
+                            <div class="col-md-6 centerContainer">
+                                <div class="container">
+                                    <div id="my_slider_telemTrans" class="carousel slide project_page" data-ride="carousel" data-interval="0" data-bs-ride="carousel">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="image_bordered"><img src="images/eidolon_telemVisTrans-2.png"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="image_bordered"><img src="images/eidolon_telemVisTrans-3.png"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="carousel-control-prev" href="#my_slider_telemTrans" role="button" data-slide="prev">
+                                        <i class="fa fa-angle-left"></i>
+                                    </a>
+                                    <a class="carousel-control-next" href="#my_slider_telemTrans" role="button" data-slide="next">
+                                        <i class="fa fa-angle-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <p class="image_text_1">&emsp;&emsp;In one particular match on DM_Transcendence, many players reported low FPS when trying to grab the power weapons. By analyzing the telemetry data, we used the low client FPS filter and player facing visualization to trace the issue to a material at the center of the map, below the spawner. The shader, which used Nanite, was confirmed as the main cause of the performance drop.</p>
+                        </div>
+                    </div>
+                    <div class="row explanation_spacing">
+                        <button id="backToTop" class="back-to-top">Back to Top</button>
+                    </div>
+                </div>
             </div>
-            <div class="row layout_padding">
-                <div class="col-md-6">
-                    <h1 class="projectpage_subtitle">Details</h1>
-                    <ul>
-                        <li class="project_bullet">9 Person Team</li>
-                        <li class="project_bullet">Built in Unreal Engine 5.4</li>
-                        <li class="project_bullet">Academic Game Project</li>
-                        <li class="project_bullet">August 2024 - Present</li>
-                    </ul>
-                </div>
-                <div class="col-md-6">
-                    <h1 class="projectpage_subtitle">My Contributions</h1>
-                    <ul>
-                        <li class="project_bullet">Engineered C++ and Blueprint scripts to visualize telemetry data for grid-based heatmap analysis of player fps and level metrics.</li>
-                        <li class="project_bullet">Grayboxed and iterated on 3 multiplayer FFA arena maps and a practice range, integrating gameplay and level features based on level design pillars to encourage strategic player movement.</li>
-                        <li class="project_bullet_indent">Structured level geometry to promote skill expression through gunplay and movement mechanics.</li>
-                        <li class="project_bullet_indent">Adhered to the game pillar, "It's Fast to Flow," by designing lanes and loops for fluid and dynamic movement abilities.</li>
-                        <li class="project_bullet_indent">Designed distinct areas using color schemes, lighting, and landmarks to guide players and enhance level flow.</li>
-                        <li class="project_bullet">Developed networked arena mechanics:</li>
-                        <li class="project_bullet_indent">Player Spawning System</li>
-                        <li class="project_bullet_indent">Weapon Spawning System</li>
-                        <li class="project_bullet_indent">Bounce Pads</li>
-                        <li class="project_bullet_indent">Propulsion Lifts</li>
-                        <li class="project_bullet_indent">Moving Platforms</li>
-                        <li class="project_bullet_indent">Moon Power Weapon 1v1 Arena</li>
-                        <li class="project_bullet">Utilized Unreal's GAS (Gameplay Ability System) to bring power weapons and abilities to life.</li>
-                        <li class="project_bullet">Coordinated playtests of LAN and Steam network systems, including a 40+ person public stress test to validate technical performance.</li>
-                    </ul>
-                </div>
-            </div>
-            <div id="targetBackToTopSection" class="toggle-button-container layout_padding">
-                <button class="toggle-page-button col-md-3 active" data-section="eid_tools-toggle" onclick="setAndShowSection('eid_tools-toggle', this)">Tools</button>
-                <button class="toggle-page-button col-md-3" data-section="eid_levels-toggle" onclick="setAndShowSection('eid_levels-toggle', this)">Levels</button>
-                <button class="toggle-page-button col-md-3" data-section="eid_mechanics-toggle" onclick="setAndShowSection('eid_mechanics-toggle', this)">Mechanics</button>
-            </div>
-            <div class="toggle eid_mechanics-toggle" style="display: none;">
-                <div class="row explanation_spacing">
-                    <h1 class="projectpage_gametitle"><i>Implementation in Review - Mechanics</i></h1>
-                    <hr>
-                    <h1 class="projectpage_roletitle">Creating Engaging Networked Multiplayer Arena Mechanics</h1>
-                    <hr>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="embed_container"><iframe src="https://www.youtube.com/embed/u2tJzde_Dyc?si=mlLDDpdc-hW1-SBg?rel=0" title="Eidolon Level Mechanics Feature" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
-                    </div>
-                </div>
-                <div class="row explanation_spacing ">
-                    <div class="col-md-5">
-                        <p class="explanation_title_1">Player Spawning System</p>
-                        <p class="explanation_text_1">&emsp;&emsp;To optimize player spawning, the system evaluates each spawn position relative to active enemy combatants. Spawn positions are then scored based on distance from these combatants, with a penalty applied if the position is within their line of sight. This ensures players spawn out of sight and as far from combat as possible in order for them to gather more resources throughout the map before entering another engagement.</p>
-                    </div>
-                    <div class="col-md-7 centerContainer">
-                        <div class="image_bordered"><img src="images/eidolon_playerSpawner2.gif"></div>
-                    </div>
-                </div>
-                <div class="row explanation_spacing ">
-                    <div class="col-md-5">
-                        <p class="explanation_title_1">Weapon Spawning System</p>
-                        <p class="explanation_text_1">&emsp;&emsp;Weapons, represented as tarot cards, spawn at designated locations. Each spawn point references a data table that holds a pool of available cards. Cards are selected via weighted random rolls, with cooldown times determined by the data table. This system allows system and level designers alike to balance weapon distribution and spawn rates throughout the map.</p>
-                    </div>
-                    <div class="col-md-7 centerContainer">
-                        <div class="image_bordered"><img src="images/eidolon_cardSpawner2.gif"></div>
-                    </div>
-                </div>
-                <div class="row explanation_spacing ">
-                    <div class="col-md-5">
-                        <p class="explanation_title_1">Bounce Pads</p>
-                        <p class="explanation_text_1">&emsp;&emsp;Bounce pads apply an adjustable vertical impulse to combatants and projectiles. Projectiles also retain a configurable percentage of their horizontal velocity, preserving momentum and enabling controlled redirection for fun player interactions.</p>
-                    </div>
-                    <div class="col-md-7 centerContainer">
-                        <div class="image_bordered"><img src="images/eidolon_bouncePad.gif"></div>
-                    </div>
-                </div>
-                <div class="row explanation_spacing ">
-                    <div class="col-md-5">
-                        <p class="explanation_title_1">Propulsion Lifts</p>
-                        <p class="explanation_text_1">&emsp;&emsp;A spline-based system that allows level designers to create gravity lifts throughout the map. Segments are dynamically placed along the spline, with adjustable parameters for segment spacing, size, and launch speed. Combatants and projectiles move through sequential segments until they reach the final exit segment, where the exit direction and speed can be customized for players and projectiles separately.</p>
-                    </div>
-                    <div class="col-md-7 centerContainer">
-                        <div class="image_bordered"><img src="images/eidolon_propulsionLift.gif"></div>
-                    </div>
-                </div>
-                <div class="row explanation_spacing">
-                    <div class="col-md-5">
-                        <p class="explanation_title_1">Moving Platforms</p>
-                        <p class="explanation_text_1">&emsp;&emsp;A spline-based system that allows level designers to create moving platforms using networked events. Adjustable settings include travel time between segments, wait times at each stop, and whether the platform cycles backwards or loops from the end to the start.</p>
-                    </div>
-                    <div class="col-md-7 centerContainer">
-                        <div class="image_bordered"><img src="images/eidolon_movingPlatform.gif"></div>
-                    </div>
-                </div>
-                <div class="row explanation_spacing">
-                    <div class="col-md-5">
-                        <p class="explanation_title_1">Inverse Moon (Power Weapon) - 1v1 Arena</p>
-                        <p class="explanation_text_1">&emsp;&emsp;This mechanic acts as the inverted ability of The Moon, the game’s second power weapon. Upon activation, the initiating and targeted combatant are transported to an isolated arena, where they receive identical cards. A brief introduction sequence occurs, allowing the combatants to see their opponent before the arena walls rise and gradually lower as the duel begins. The winner of the duel claims a fully recharched Moon card, and both players return to the main match, continuing the lunar cycle.</p>
-                    </div>
-                    <div class="col-md-7 centerContainer">
-                        <div class="image_bordered"><img src="images/eidolon_moonArena.gif"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="toggle eid_levels-toggle" style="display: none;">
-                <div class="row explanation_spacing">
-                    <h1 class="projectpage_gametitle"><i>Implementation in Review - Levels</i></h1>
-                    <hr>
-                    <h1 class="projectpage_roletitle">Designing Multiplayer Arenas for People and Bots Alike</h1>
-                    <hr>
-                </div>
-                <div class="row explanation_spacing">
-                    <div class="col-md-6">
-                        <p class="explanation_title_1">Why Make Levels as a Technical Designer?</p>
-                        <p class="explanation_text_1">&emsp;&emsp;On top of building the tools and mechanics, being a Technical Designer means ensuring that the things you make for the team are intuitive, effective, and seamlessly integrate into the development process. For this project, I served as the bridge between the tech team and our level designer, who joined later in development. This meant I needed to understand not only how easy my tools were to use but also their limitations before handing them off. </p>
-                        <p class="explanation_text_1">&emsp;&emsp;Designing levels myself gave me direct experience with multiplayer level design, expanded my technical vocabulary for communicating with level designers, and provided valuable insight into how players interacted with different spaces and mechanics. It also helped me identify where certain mechanics excelled and where others fell short.</p>
-                        <p class="explanation_text_1">&emsp;&emsp;This process allowed me to refine my tools and systems to better support our level team, making it easier for them to shape gameplay as they intended. It also meant I could anticipate design needs, communicate limitations early, and prevent roadblocks before they occurred. Through this project, I not only deepened my own understanding of level design but also helped ensure the game's mechanics and environments worked together as one cohesive experience, enabling others to do their best work.</p>
-                    </div>
-                    <div class="col-md-6">
-                        <p class="explanation_title_1">Level Pillars:</p>
+            <!-- decription section end -->
+            <!-- footer section start -->
+            <div class="section_footer ">
+                <div class="container">
+                    <div class="social_icon">
                         <ul>
-                            <li class="project_bullet">Unbroken Momentum</li>
-                            <li class="project_bullet_indent">Each map should maintain strong flow between areas. Any given location should provide at least three viable movement options to ensure fluid player navigation throughout the arena.</li>
-                            <li class="project_bullet">Expansive Arenas</li>
-                            <li class="project_bullet_indent">Multiple areas of the map should remain relevant and see active play, preventing a single dominant location from dictating engagements.</li>
-                            <li class="project_bullet">Limited Domination Space</li>
-                            <li class="project_bullet_indent">Power positions should provide advantages without allowing prolonged control over engagements. Sightlines, cover, lack of weapon resources, and counterplay options should ensure no single location becomes an unchallenged stronghold.</li>
+                            <li><a href="https://www.linkedin.com/in/corbyn-lamar/"><img src="images/linkdin-icon.png"></a></li>
+                            <li><a href="mailto:gocorbyn@gmail.com"><img src="images/mail-icon.png"></a></li>
                         </ul>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <p class="explanation_title_1">DM_Divinity</p>
-                        <ul>
-                            <li class="explanation_bullet">Circular and ∞ Lane Layout</li>
-                            <li class="explanation_bullet">Medium Time to Engagement</li>
-                            <li class="explanation_bullet">Environmental Features:</li>
-                            <li class="explanation_bullet_indent">Central Coloseum with Rotating Platform</li>
-                            <li class="explanation_bullet_indent">Elevated Power Spawner Requiring Dash or Card Ability Use</li>
-                            <li class="explanation_bullet_indent">Outer Edge Rotate</li>
-                            <li class="explanation_bullet_indent">Strategic Dash Points</li>
-                            <li class="explanation_bullet">Utilized Level Mechanics:</li>
-                            <li class="explanation_bullet_indent">Rotating Center Platform</li>
-                            <li class="explanation_bullet_indent">Bounce Pads</li>
-                        </ul>
-                    </div>
-                    <div class="col-md-8 centerContainer">
-                        <div class="container">
-                            <div id="my_slider_divinity" class="carousel slide project_page" data-ride="carousel" data-interval="0" data-bs-ride="carousel">
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="embed_container image_bordered"><iframe src="https://www.youtube.com/embed/QlRMrhPsGZM?si=63hVi7xLRb_u1TXS?rel=0" title="Eidolon: Fate of Fools Divinity Feature" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="image_bordered"><img src="images/eidolon_div-1.png"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="image_bordered"><img src="images/eidolon_div-2.png"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="image_bordered"><img src="images/eidolon_div-3.png"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="image_bordered"><img src="images/eidolon_div-4.png"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="image_bordered"><img src="images/eidolon_div-5.png"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="image_bordered"><img src="images/eidolon_div-6.png"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="image_bordered"><img src="images/eidolon_div-7.png"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a class="carousel-control-prev" href="#my_slider_divinity" role="button" data-slide="prev">
-                                <i class="fa fa-angle-left"></i>
-                            </a>
-                            <a class="carousel-control-next" href="#my_slider_divinity" role="button" data-slide="next">
-                                <i class="fa fa-angle-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row explanation_spacing">
-                    <div class="col-md-4">
-                        <p class="explanation_title_1">DM_Elevate</p>
-                        <ul>
-                            <li class="explanation_bullet">∞ Lane Layout</li>
-                            <li class="explanation_bullet">Low Time to Engagement</li>
-                            <li class="explanation_bullet">Environmental Features:</li>
-                            <li class="explanation_bullet_indent">Laser-Tag Arena Style Ground Level</li>
-                            <li class="explanation_bullet_indent">Rising Platforms with Weapon Spawners</li>
-                            <li class="explanation_bullet_indent">Propulsion Lift to Top Level</li>
-                            <li class="explanation_bullet_indent">Outer Rocket Jump Platform</li>
-                            <li class="explanation_bullet">Utilized Level Mechanics:</li>
-                            <li class="explanation_bullet_indent">Propulsion Lift</li>
-                            <li class="explanation_bullet_indent">Moving Platforms</li>
-                        </ul>
-                    </div>
-                    <div class="col-md-8 centerContainer">
-                        <div class="container explanation_spacing">
-                            <div id="my_slider_elevate" class="carousel slide project_page" data-ride="carousel" data-interval="0" data-bs-ride="carousel">
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="embed_container image_bordered"><iframe src="https://www.youtube.com/embed/vbnDpP5YXZE?si=KXmIiqX-h1WnhJaP?rel=0" title="Eidolon: Fate of Fools Elevate Feature" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="image_bordered"><img src="images/eidolon_ele-1.png"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="image_bordered"><img src="images/eidolon_ele-2.png"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="image_bordered"><img src="images/eidolon_ele-3.png"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="image_bordered"><img src="images/eidolon_ele-4.png"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="image_bordered"><img src="images/eidolon_ele-5.png"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="image_bordered"><img src="images/eidolon_ele-6.png"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="image_bordered"><img src="images/eidolon_ele-7.png"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a class="carousel-control-prev" href="#my_slider_elevate" role="button" data-slide="prev">
-                                <i class="fa fa-angle-left"></i>
-                            </a>
-                            <a class="carousel-control-next" href="#my_slider_elevate" role="button" data-slide="next">
-                                <i class="fa fa-angle-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <p class="explanation_title_1">DM_Transcendence</p>
-                        <ul>
-                            <li class="explanation_bullet">Interconnected Multi-Circular Lane Layout</li>
-                            <li class="explanation_bullet">Medium-High Time to Engagement</li>
-                            <li class="explanation_bullet">Environmental Features:</li>
-                            <li class="explanation_bullet_indent">Central Propulsion Lift</li>
-                            <li class="explanation_bullet_indent">Central Tower and Power Platform</li>
-                            <li class="explanation_bullet_indent">3 Distinct Rising Towers</li>
-                            <li class="explanation_bullet_indent">3 Additional Connecting Areas</li>
-                            <li class="explanation_bullet">Utilized Level Mechanics:</li>
-                            <li class="explanation_bullet_indent">Propulsion Lift</li>
-                            <li class="explanation_bullet_indent">Bounce Pads</li>
-                        </ul>
-                    </div>
-                    <div class="col-md-8 centerContainer">
-                        <div class="container explanation_spacing">
-                            <div id="my_slider_transcendence" class="carousel slide project_page" data-ride="carousel" data-interval="0" data-bs-ride="carousel">
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="embed_container image_bordered"><iframe src="https://www.youtube.com/embed/2SmDtqQbMa8?si=t53rrUNdOAGH7tLA?rel=0" title="Eidolon: Fate of Fools Transcendence Feature" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="image_bordered"><img src="images/eidolon_trans-1.png"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="image_bordered"><img src="images/eidolon_trans-2.png"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="image_bordered"><img src="images/eidolon_trans-3.png"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="image_bordered"><img src="images/eidolon_trans-4.png"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="image_bordered"><img src="images/eidolon_trans-5.png"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="image_bordered"><img src="images/eidolon_trans-6.png"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="image_bordered"><img src="images/eidolon_trans-7.png"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a class="carousel-control-prev" href="#my_slider_transcendence" role="button" data-slide="prev">
-                                <i class="fa fa-angle-left"></i>
-                            </a>
-                            <a class="carousel-control-next" href="#my_slider_transcendence" role="button" data-slide="next">
-                                <i class="fa fa-angle-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row explanation_spacing">
-                    <div class="col-md-5">
-                        <p class="explanation_title_1">Practice Range</p>
-                        <ul>
-                            <li class="explanation_bullet">Shows Off Each Card in a Firing Range Format</li>
-                            <li class="explanation_bullet">Segmented to Highlight Card Utility:</li>
-                            <li class="explanation_bullet_indent">Bouncing Projectile Area</li>
-                            <li class="explanation_bullet_indent">Vertical Movement Utility Area</li>
-                            <li class="explanation_bullet_indent">Rocket Jump, Knockback, and Slam Area</li>
-                            <li class="explanation_bullet_indent">Chariot Sniping Range</li>
-                            <li class="explanation_bullet_indent">Projectile Interaction Areas for Propulsion Lifts & Bounce Pads</li>
-                            <li class="explanation_bullet">Purpose:</li>
-                            <li class="explanation_bullet_indent">Allow a Space for Players to Try Out Weapons</li>
-                            <li class="explanation_bullet_indent">Teach Players Spots to Utilize Card Abilities</li>
-                            <li class="explanation_bullet_indent">Utilize as a Testing Space During Development</li>
-                        </ul>
-                    </div>
-                    <div class="col-md-7 centerContainer">
-                        <div class="container explanation_spacing">
-                            <div id="my_slider_practicerange" class="carousel slide project_page" data-ride="carousel" data-interval="0" data-bs-ride="carousel">
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="image_bordered"><img src="images/eidolon_pr-4.png"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="image_bordered"><img src="images/eidolon_pr-1.png"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="image_bordered"><img src="images/eidolon_pr-2.png"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="image_bordered"><img src="images/eidolon_pr-3.png"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a class="carousel-control-prev" href="#my_slider_practicerange" role="button" data-slide="prev">
-                                <i class="fa fa-angle-left"></i>
-                            </a>
-                            <a class="carousel-control-next" href="#my_slider_practicerange" role="button" data-slide="next">
-                                <i class="fa fa-angle-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
             </div>
-            <div class="toggle eid_tools-toggle" style="display: block;">
-                <div class="row explanation_spacing">
-                    <h1 class="projectpage_gametitle"><i>Implementation in Review - Tools</i></h1>
-                    <hr>
-                    <h1 class="projectpage_roletitle">Refining Levels and Optimizing Client FPS through Telemetry Visualization Tools</h1>
-                    <hr>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="embed_container"><iframe src="https://www.youtube.com/embed/pY2anb874qo?si=s-UuywefEZMbjpGS?rel=0" title="Eidolon Level Tools Feature" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
-                    </div>
-                </div>
-                <div class="row explanation_spacing">
-                    <h1 class="explanation_title_1">Purpose of Telemetry Collection and Visualization</h1>
-                    <p class="explanation_text_1">&emsp;&emsp;In fast-paced arena shooters, level readability, engagement flow, and performance stability are critical to ensuring a smooth player experience. To better understand how players and bots were engaging with levels, I developed a telemetry visualization tool that collects and displays in-game data directly within Unreal Engine 5.4. This allowed me to analyze movement patterns and lane utilization, high kill zones and possible power positions, and client FPS performance after playtests were conducted. Using this tool, I identified map traversal inefficiencies for both players and bots, spawn imbalances, and performance bottlenecks, leading to key optimizations across multiple levels.</p>
-                </div>
-                <div class="row explanation_spacing">
-                    <div class="col-md-5">
-                        <p class="explanation_title_1">Displaying Kill & Death Data</p>
-                        <p class="explanation_text_1">&emsp;&emsp;After collecting telemetry from matches, I wrote a script to parse the CSV data and visualize it by spawning colored cubes for killer and victim positions, drawing lines between them to indicate relativity. This provided level designers with a clear view of player interactions in 3D space, something a heatmap alone couldn’t convey.</p>
-                    </div>
-                    <div class="col-md-7 centerContainer">
-                        <div class="image_bordered"><img src="images/eidolon_telem-1.png"></div>
-                    </div>
-                </div>
-                <div class="row explanation_spacing">
-                    <div class="col-md-5">
-                        <p class="explanation_title_1">Displaying Positional Data - Players</p>
-                        <p class="explanation_text_1">&emsp;&emsp;I set up the positional tracker to record key data like positions, facing, timestamps, current life, client FPS, and player names. This allows level designers to filter and analyze player movement across lanes and spaces at different points in the match. These insights help identify underused or congested areas, enabling designers to adjust the level layout for better flow and optimize player engagement.</p>
-                    </div>
-                    <div class="col-md-7 centerContainer">
-                        <div class="image_bordered"><img src="images/eidolon_telem-2.png"></div>
-                    </div>
-                </div>
-                <div class="row explanation_spacing">
-                    <div class="col-md-5">
-                        <p class="explanation_title_1">Displaying Positional Data - Bots</p>
-                        <p class="explanation_text_1">&emsp;&emsp;In addition to helping level designers optimize levels for players, the positional telemetry also revealed areas that needed improvement for bot navigation. By analyzing the data, we identified spots where additional nav links were required to allow bots to traverse more effectively. This insight enabled us to improve bot movement and, in turn, enhanced the overall level flow, leading to more dynamic interactions between bots and players.</p>
-                    </div>
-                    <div class="col-md-7 centerContainer">
-                        <div class="image_bordered"><img src="images/eidolon_telem-3.png"></div>
-                    </div>
-                </div>
-                <div class="row explanation_spacing">
-                    <div class="col-md-5">
-                        <p class="explanation_title_1">Telemetry Grouping</p>
-                        <p class="explanation_text_1">&emsp;&emsp;To be able to efficiently display telemetry in a heatmap, I created a scalable grid-based system with an indexing function that maps 3D positions into a 1D array of data structures using C++ and Blueprints. This allows level designers to adjust the overall grid size and individual cell sizes to meet level needs while enabling efficient data retrieval for generating heatmaps in the editor.</p>
-                    </div>
-                    <div class="col-md-7 centerContainer">
-                        <div class="image_bordered"><img src="images/eidolon_telem-4.png"></div>
-                    </div>
-                </div>
-                <div class="row explanation_spacing">
-                    <div class="col-md-5">
-                        <p class="explanation_title_1">Kill & Death Heatmaps</p>
-                        <p class="explanation_text_1">&emsp;&emsp;The victim and killer heat map offers a dynamic, scalable view of player interactions, highlighting areas with frequent deaths and concentrated kills. By feeding the data into a material and adjusting alpha for color and opacity, I highlighted kill and death zones, helping identify potential power positions or overly dangerous areas. This heat map offers valuable insights for informing level adjustments, ensuring balanced encounters and adherence to the intended level design.</p>
-                    </div>
-                    <div class="col-md-7 centerContainer">
-                        <div class="image_bordered"><img src="images/eidolon_telem-5.png"></div>
-                    </div>
-                </div>
-                <div class="row explanation_spacing">
-                    <div class="col-md-5">
-                        <p class="explanation_title_1">Positional Heatmap</p>
-                        <p class="explanation_text_1">&emsp;&emsp;The positional heat map groups player and bot positions, offering insight into underutilized or overrun areas and paths. By feeding position data into the material’s alpha channel, areas with higher foot traffic become darker, helping to visualize where players may naturally converge. This is especially useful for identifying power positions and detecting where specific players might be camping by filtering data by player names for a given match.</p>
-                    </div>
-                    <div class="col-md-7 centerContainer">
-                        <div class="image_bordered"><img src="images/eidolon_telem-6.png"></div>
-                    </div>
-                </div>
-                <div class="row explanation_spacing">
-                    <p class="explanation_title_1">Optimizing Levels for Client FPS</p>
-                    <p class="explanation_text_1">&emsp;&emsp;While working on the positional telemetry visualizer, I realized that adding client FPS data alongside player positions and facing could provide valuable insights for performance optimization. Since I was already collecting other key data at regular intervals for visualization, incorporating this extra layer was relatively simple. After running large-scale 7-player playtests on each map, I filtered the data to focus on the lowest 5% of FPS per client, which proved more effective than using mean or median FPS per client in identifying performance bottlenecks. This approach enabled us to pinpoint areas in need of optimization, particularly with lighting and shader usage in our levels.</p>
-                </div>
-                <div class="row">
-                    <div class="col-md-6 centerContainer">
-                        <div class="image_bordered"><img src="images/eidolon_telemVisDiv-1.png"></div>
-                    </div>
-                    <div class="col-md-6 centerContainer">
-                        <div class="container">
-                            <div id="my_slider_telemDiv" class="carousel slide project_page" data-ride="carousel" data-interval="0" data-bs-ride="carousel">
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="image_bordered"><img src="images/eidolon_telemVisDiv-2.png"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="image_bordered"><img src="images/eidolon_telemVisDiv-3.png"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a class="carousel-control-prev" href="#my_slider_telemDiv" role="button" data-slide="prev">
-                                <i class="fa fa-angle-left"></i>
-                            </a>
-                            <a class="carousel-control-next" href="#my_slider_telemDiv" role="button" data-slide="next">
-                                <i class="fa fa-angle-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <p class="image_text_1">&emsp;&emsp;Filtering the lowest 5% FPS per client revealed consistent slowdowns near the center of DM_Divinity. Seeing that players faced all directions in this area ruled out the central rotating platform, leading to an investigation of lighting, which turned out to be the cause.</p>
-                </div>
-                <div class="row">
-                    <div class="col-md-6 centerContainer">
-                        <div class="image_bordered"><img src="images/eidolon_telemVisApo-1.png"></div>
-                    </div>
-                    <div class="col-md-6 centerContainer">
-                        <div class="container">
-                            <div id="my_slider_telemApo" class="carousel slide project_page" data-ride="carousel" data-interval="0" data-bs-ride="carousel">
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="image_bordered"><img src="images/eidolon_telemVisApo-2.png"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="image_bordered"><img src="images/eidolon_telemVisApo-3.png"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a class="carousel-control-prev" href="#my_slider_telemApo" role="button" data-slide="prev">
-                                <i class="fa fa-angle-left"></i>
-                            </a>
-                            <a class="carousel-control-next" href="#my_slider_telemApo" role="button" data-slide="next">
-                                <i class="fa fa-angle-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <p class="image_text_1">&emsp;&emsp;For DM_Apotheosis, FPS drops weren’t as noticeable during playtests, but the tool revealed clusters of low FPS scattered across the map. Filtering the data showed consistent low client FPS in specific areas, leading us to investigate lighting—confirming it as the main cause of the performance issues on this map.</p>
-                </div>
-                <div class="row">
-                    <div class="col-md-6 centerContainer">
-                        <div class="image_bordered"><img src="images/eidolon_telemVisTrans-1.png"></div>
-                    </div>
-                    <div class="col-md-6 centerContainer">
-                        <div class="container">
-                            <div id="my_slider_telemTrans" class="carousel slide project_page" data-ride="carousel" data-interval="0" data-bs-ride="carousel">
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="image_bordered"><img src="images/eidolon_telemVisTrans-2.png"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="image_bordered"><img src="images/eidolon_telemVisTrans-3.png"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a class="carousel-control-prev" href="#my_slider_telemTrans" role="button" data-slide="prev">
-                                <i class="fa fa-angle-left"></i>
-                            </a>
-                            <a class="carousel-control-next" href="#my_slider_telemTrans" role="button" data-slide="next">
-                                <i class="fa fa-angle-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <p class="image_text_1">&emsp;&emsp;In one particular match on DM_Transcendence, many players reported low FPS when trying to grab the power weapons. By analyzing the telemetry data, we used the low client FPS filter and player facing visualization to trace the issue to a material at the center of the map, below the spawner. The shader, which used Nanite, was confirmed as the main cause of the performance drop.</p>
-                </div>
+            <!-- footer section end -->
+            <!-- copyright section start -->
+            <div class="copyright_section">
+                <p class="copyright_text">©2025 All Rights Reserved By Corbyn LaMar</p>
             </div>
-            <div class="row explanation_spacing">
-                <button id="backToTop" class="back-to-top">Back to Top</button>
-            </div>
-        </div>
-    </div>
-    <!-- decription section end -->
-    <!-- footer section start -->
-    <div class="section_footer ">
-        <div class="container">
-            <div class="social_icon">
-                <ul>
-                    <li><a href="https://www.linkedin.com/in/corbyn-lamar/"><img src="images/linkdin-icon.png"></a></li>
-                    <li><a href="mailto:gocorbyn@gmail.com"><img src="images/mail-icon.png"></a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!-- footer section end -->
-    <!-- copyright section start -->
-    <div class="copyright_section">
-        <p class="copyright_text">©2025 All Rights Reserved By Corbyn LaMar</p>
-    </div>
-    <!-- copyright section end -->
-    <!-- Javascript files-->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/jquery-3.0.0.min.js"></script>
-    <script src="js/plugin.js"></script>
-    <!-- sidebar -->
-    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="js/custom.js"></script>
-    <!-- javascript -->
-    <script src="js/owl.carousel.js"></script>
-    <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $(".fancybox").fancybox({
-                openEffect: "none",
-                closeEffect: "none"
-            });
-    </script>
-    <script>
-    document.getElementById("backToTop").addEventListener("click", function () {
-        const targetSection = document.getElementById("targetBackToTopSection");
-    
-        targetSection.scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-        });
-    });
-    </script>
+            <!-- copyright section end -->
+            <!-- Javascript files-->
+            <script src="js/jquery.min.js"></script>
+            <script src="js/popper.min.js"></script>
+            <script src="js/bootstrap.bundle.min.js"></script>
+            <script src="js/jquery-3.0.0.min.js"></script>
+            <script src="js/plugin.js"></script>
+            <!-- sidebar -->
+            <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+            <script src="js/custom.js"></script>
+            <!-- javascript -->
+            <script src="js/owl.carousel.js"></script>
+            <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+            <script>
+                $(document).ready(function () {
+                    $(".fancybox").fancybox({
+                        openEffect: "none",
+                        closeEffect: "none"
+                    });
+            </script>
+            <script>
+                document.getElementById("backToTop").addEventListener("click", function () {
+                    const targetSection = document.getElementById("targetBackToTopSection");
+
+                    targetSection.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start"
+                    });
+                });
+            </script>
 </body>
 </html>
