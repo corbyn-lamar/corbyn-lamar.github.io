@@ -211,7 +211,7 @@
                     <h1 class="projectpage_subtitle">Awards & Publications</h1>
                     <ul>
                         <li class="project_bullet">Published on Steam on March 29th, 2024</li>
-                        <li class="project_bullet_indent">Very Positive - 52 Reviews (11/2/2024)</li>
+                        <li class="project_bullet_indent">Very Positive - 55 Reviews (4/2/2025)</li>
                     </ul>
                 </div>
                 <div class="col-md-6">
@@ -220,12 +220,121 @@
                         <li class="project_bullet">Coded the graphics engine architecture, managing the graphics & render pipeline development using libraries such as glfw, glew, and glm.</li>
                         <li class="project_bullet">Implemented core engine functionality, such as the mesh manager, graphics system, and a robust gameobject-based particle system.</li>
                         <li class="project_bullet">Engineered gameplay systems, such as delivery objectives, dynamic objective targeting, the dynamic camera, and the user interface system.</li>
+                        <li class="project_bullet">Constructed UI elements with dynamic feedback and particle effects for confetti and star-based player rewards.</li>
+                        <li class="project_bullet">Developed a custom scrolling jukebox menu to showcase music tracks, ensuring smooth navigation and visual clarity.</li>
                         <li class="project_bullet">Collaborated on the game production cycle utilizing weekly sprints and task documentation.</li>
+                        <li class="project_bullet">Added the ability to pet the various cats found around the city.</li>
                     </ul>
                 </div>
             </div>
             <div class="row">
                 <iframe src="https://store.steampowered.com/widget/2865360/" frameborder="0" width="646" height="190"></iframe>
+            </div>
+            <div class="row explanation_spacing">
+                <h1 class="projectpage_gametitle"><i>Implementation in Review - Particle System Tool</i></h1>
+                <hr>
+                <h1 class="projectpage_roletitle">Building a Serialized Particle System for Dynamic Game Effects</h1>
+                <hr>
+            </div>
+            <div class="row">
+                <h1 class="projectpage_subtitle">Overview</h1>
+                <p class="explanation_text_1">&emsp;&emsp;To bring the world and feedback of <i>Inline: Out of Time</i> to life, we needed a flexible particle system that allowed designers and artists to create effects without diving into engine code. I built a lightweight game object-based, serialized system that let team members control visuals through JSON, supporting gameplay feedback and environmental polish while keeping performance in check. Below is the documentation that I had provided them for various properties.</p>
+                <div class="row explanation_spacing w-100">
+                    <div class="col-md-6">
+                        <details>
+                            <summary class="projectpage_subtitle_centered"><strong>Emitter Properties</strong></summary>
+                            <ul>
+                                <li class="explanation_bullet_spaced"><u>Name:</u> The name of the emitter as a string</li>
+                                <li class="explanation_bullet_spaced"><u>PlayOnAwake:</u> Determines if the Particle Emitter should play when the scene gets initialized</li>
+                                <li class="explanation_bullet_spaced"><u>Looping:</u> Condition for whether the particle system should have an infinite duration</li>
+                                <li class="explanation_bullet_spaced"><u>Duration:</u> The time (in seconds) that the particle system should play for</li>
+                                <li class="explanation_bullet_spaced"><u>Prewarm:</u> A bool value representing if the particle should update its duration length when the emitter gets initialized in order to have particles already spawned within the scene when the player gets loaded</li>
+                                <li class="explanation_bullet_spaced"><u>MaxParticles:</u> The maximum number of particles the current emitter can generate at a time</li>
+                                <li class="explanation_bullet_spaced"><u>Frequency:</u> How many particles should spawn per second</li>
+                                <li class="explanation_bullet_spaced"><u>UseGravity:</u> A bool value representing whether or not to have the particles be affected by particle gravity scaling (now in framework.h)</li>
+                                <li class="explanation_bullet_spaced"><u>Type:</u> The shape of the emitter - Rectangle, Circle, Cone, or Edge</li>
+                                <li class="explanation_bullet_spaced"><u>Offset:</u> A vector representing the offset of the particle emitter from the GameObject that it is attached to</li>
+                                <li class="explanation_bullet_spaced"><u>Emitter Shape Properties:</u></li>
+                                <li class="explanation_bullet_spaced_indent"><u>Height (Square):</u> The height of the square emitter</li>
+                                <li class="explanation_bullet_spaced_indent"><u>Width (Square):</u> The width of the square emitter</li>
+                                <li class="explanation_bullet_spaced_indent"><u>Radius (Circle and Cone):</u> The radius of the circle or cone emitter</li>
+                                <li class="explanation_bullet_spaced_indent"><u>Angle (Cone):</u> The angle that the cone emitter makes (in degrees)</li>
+                                <li class="explanation_bullet_spaced_indent"><u>Length (Edge):</u> The length of the edge shape to spawn particles on</li>
+                                <li class="explanation_bullet_spaced_indent"><u>Rotation (Edge and Cone):</u> The angle (in degrees) to rotate a given cone or edge emitter</li>
+                            </ul>
+                        </details>
+                    </div>
+                    <div class="col-md-6">
+                        <details>
+                            <summary class="projectpage_subtitle_centered"><strong>Particle Properties</strong></summary>
+                            <ul>
+                                <li class="explanation_bullet_spaced"><u>Particle_LifeTime:</u> The lifetime of the particles (in seconds)</li>
+                                <li class="explanation_bullet_spaced"><u>Particle_Speed:</u> The velocity to set the particles to (magnitude)</li>
+                                <li class="explanation_bullet_spaced"><u>Particle_Direction:</u> A vector representing the direction the particle will travel in (will be translated to a unit vector, so the difference in x and y values between 0 and 1 will matter!)</li>
+                                <li class="explanation_bullet_spaced"><u>Particle_StartScale:</u> The starting scale of the particles</li>
+                                <li class="explanation_bullet_spaced"><u>Particle_EndScale:</u> The ending scale to linearly interpolate the particles to</li>
+                                <li class="explanation_bullet_spaced"><u>Particle_StartColor:</u> The starting color of the particles (rgba format, values from 0.0 to 1.0)</li>
+                                <li class="explanation_bullet_spaced"><u>Particle_EndColor:</u> The ending color to linearly interpolate the particles to (rgba format, values from 0.0 to 1.0)</li>
+                                <li class="explanation_bullet_spaced"><u>Particle_StartAlpha:</u> The starting alpha of the particles (values from 0.0 to 1.0)</li>
+                                <li class="explanation_bullet_spaced"><u>Particle_EndAlpha:</u> The ending alpha to linearly interpolate the particles to (values from 0.0 to 1.0)</li>
+                                <li class="explanation_bullet_spaced"><u>Particle_Rotation:</u> The amount to rotate the particles each frame</li>
+                                <li class="explanation_bullet_spaced"><u>Particle_Texture:</u> The texture to set the particles to as they spawn in the form of a string</li>
+                                <li class="explanation_bullet_spaced"><u>Particle_Z:</u> The Z layer to spawn the particles on (useful if you want particles in the background for example)</li>
+                                <li class="explanation_bullet_spaced"><u>Particle_SpeedVariance:</u> A float representing a value of range to add or subtract from the starting speed (inclusively)</li>
+                                <li class="explanation_bullet_spaced"><u>Particle_ScaleVariance:</u> A float representing a value of range to add or subtract from the starting scale X and Y (inclusively)</li>
+                            </ul>
+                        </details>
+                    </div>
+                </div>
+            </div>
+            <div class="row explanation_spacing">
+                <h1 class="projectpage_subtitle">Feedback Usecases</h1>
+                <p class="explanation_text_1">&emsp;&emsp;The particle system supported a lot of the game's high-impact gameplay feedback, such as sparks when grinding rails, dynamic feedback for when deliveries and segments are completed, and stars and confetti on the win screen. The ability to utilize the system this way enhanced satisfaction and provided clear, rewarding visual cues for the player.</p>
+            </div>
+            <div class="row explanation_spacing">
+                <div class="col-md-6">
+                    <div class="image_gif"><img src="images/inline_gifFeedback1.gif"></div>
+                </div>
+                <div class="col-md-6">
+                    <div class="image_gif"><img src="images/inline_gifFeedback3.gif"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="image_gif"><img src="images/inline_gifFeedback4.gif"></div>
+                </div>
+                <div class="col-md-6">
+                    <div class="image_gif"><img src="images/inline_gifFeedback2.gif"></div>
+                </div>
+            </div>
+            <div class="row explanation_spacing">
+                <h1 class="projectpage_subtitle">In-World Environmental Usecases</h1>
+                <p class="explanation_text_1">&emsp;&emsp;The particle system also contributed significantly to the environmental storytelling that occurs while you make your deliveries. Floating music notes from jukeboxes, puffs from AC units, zooming trains in the background, and passing drones all blend naturally into the world, immersing players in the retro-futuristic setting. In addition, it also helps you pet any cats you may find!</p>
+            </div>
+            <div class="row explanation_spacing">
+                <div class="col-md-6">
+                    <div class="image_gif"><img src="images/inline_gifWorld2.gif"></div>
+                </div>
+                <div class="col-md-6">
+                    <div class="image_gif"><img src="images/inline_gifWorld3.gif"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="image_gif"><img src="images/inline_gifWorld4.gif"></div>
+                </div>
+                <div class="col-md-6">
+                    <div class="image_gif"><img src="images/inline_gifWorld1.gif"></div>
+                </div>
+            </div>
+            <div class="row explanation_spacing">
+                <h1 class="projectpage_subtitle">Takeaways</h1>
+                <p class="explanation_text_1">&emsp;&emsp;This particle system made it easy for non-technical team members to directly control visual effects, speeding up iteration and allowing collaborative ideas to flow, enhancing the game altogether. It supported both dramatic gameplay feedback and subtle environmental polish, helping make the game world feel more alive while still being performant.</p>
+            </div>
+            <div class="row explanation_spacing">
+                <div class="col-md-12">
+                    <div class="image_gif"><img src="images/inline_gifTakeaway.gif"></div>
+                </div>
             </div>
         </div>
     </div>

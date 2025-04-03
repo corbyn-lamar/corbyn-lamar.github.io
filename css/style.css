@@ -699,6 +699,41 @@ video_1 {
     padding-left: 2em;
 }
 
+.explanation_bullet_spaced {
+    list-style-type: disc;
+    list-style-position: inside;
+    width: 100%;
+    float: left;
+    font-size: calc(0.4vw + 1.2vh);
+    color: #fefeff;
+    font-weight: 400;
+    margin-left: 0px;
+    line-height: 2.5;
+    display: grid;
+    grid-template-columns: auto 1fr; /* First column auto-sizes, second fills space */
+    gap: 10px;
+    align-items: start; /* Align text properly */
+}
+
+.explanation_bullet_spaced u {
+    text-align: right; /* Align the underlined title to the right */
+    display: inline-block;
+    min-width: 150px; /* Adjust based on the longest title */
+    white-space: nowrap;
+}
+
+.explanation_bullet_spaced_indent {
+    list-style-type: circle;
+    list-style-position: inside;
+    width: 100%;
+    float: left;
+    font-size: calc(0.4vw + 1.2vh);
+    color: #fefeff;
+    font-weight: 400;
+    line-height: 2.5;
+    padding-left: 2em;
+}
+
 .image_text_1 {
     width: 100%;
     text-align: center;
@@ -855,6 +890,22 @@ video_1 {
     text-transform: uppercase;
     text-align: left;
     padding-top: 5%;
+}
+
+.projectpage_subtitle_centered {
+    width: 100%;
+    font-size: calc(0.625vw + 1.25vh);
+    color: #fefeff;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 5%;
+}
+
+.projectpage_subtitle_centered:hover {
+    color: #fefeff;
+    transform: scale(1.05);
+    transition: all 0.2s ease-in-out;
 }
 
 .project_bullet {
