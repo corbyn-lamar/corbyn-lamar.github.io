@@ -406,11 +406,6 @@ button {
     border-radius: 50%;
 }
 
-.center_row {
-    align-items: center;
-    justify-content: center;
-}
-
 .portrait_image {
     width: 75%;
     padding-top: 0px;
@@ -420,6 +415,11 @@ button {
     margin: auto;
     border-radius: 25px;
     overflow: hidden
+}
+
+.center_row {
+    align-items: center;
+    justify-content: center;
 }
 
 video_1 {
