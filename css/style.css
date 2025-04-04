@@ -395,6 +395,22 @@ button {
     border-color: black;
 }
 
+.image_collage {
+    width: 100%;
+    padding-top: 0px;
+    border-radius: 50%;
+}
+.image_collage_half {
+    width: 50%;
+    padding-top: 0px;
+    border-radius: 50%;
+}
+
+.center_row {
+    align-items: center;
+    justify-content: center;
+}
+
 .portrait_image {
     width: 75%;
     padding-top: 0px;
@@ -612,6 +628,10 @@ video_1 {
 
 .project_spacing {
     padding-bottom: 5%;
+}
+
+.image_spacing {
+    padding-bottom: 2.5%;
 }
 
 .explanation_spacing {
